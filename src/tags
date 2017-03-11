@@ -1,0 +1,844 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AcquireImages	Abhi_test1/Abhi_test1.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	Abhi_test2/Abhi_test2.cpp	/^int AcquireImages(CameraList camList)$/;"	f
+AcquireImages	Abhi_test3/Abhi_test3.cpp	/^int AcquireImages(CameraList camList, INodeMap & nodeMap\/*, INodeMap & nodeMapTLDevice*\/)$/;"	f
+AcquireImages	Acquisition/Acquisition.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	AcquisitionMultipleCamera/AcquisitionMultipleCamera.cpp	/^int AcquireImages(CameraList camList)$/;"	f
+AcquireImages	AcquisitionMultipleCamera_C/AcquisitionMultipleCamera_C.cpp	/^spinError AcquireImages(spinCameraList hCameraList, size_t numCameras)$/;"	f
+AcquireImages	Acquisition_C/Acquisition_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	ChunkData/ChunkData.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	ChunkData_C/ChunkData_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	DeviceEvents/DeviceEvents.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	DeviceEvents_C/DeviceEvents_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	Exposure/Exposure.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	Exposure_C/Exposure_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	/^spinError AcquireImages(spinCamera hCam, quickSpin qs, quickSpinTLDevice qsD)$/;"	f
+AcquireImages	Exposure_QuickSpin/Exposure_QuickSpin.cpp	/^int AcquireImages(CameraPtr pCam)$/;"	f
+AcquireImages	ImageEvents/ImageEvents.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice, ImageEventHandler*& imageEventHandler)$/;"	f
+AcquireImages	ImageEvents_C/ImageEvents_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, userData* imageEventInfo)$/;"	f
+AcquireImages	ImageFormatControl/ImageFormatControl.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	ImageFormatControl_C/ImageFormatControl_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	ImageFormatControl_C_QuickSpin/ImageFormatControl_C_QuickSpin.cpp	/^spinError AcquireImages(spinCamera hCam, quickSpin qs, quickSpinTLDevice qsD)$/;"	f
+AcquireImages	ImageFormatControl_QuickSpin/ImageFormatControl_QuickSpin.cpp	/^int AcquireImages(CameraPtr pCam)$/;"	f
+AcquireImages	LookupTable/LookupTable.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	LookupTable_C/LookupTable_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	SaveToAvi/SaveToAvi.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, vector<ImagePtr> & images)$/;"	f
+AcquireImages	SaveToAvi_C/SaveToAvi_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice, spinImage hImages[])$/;"	f
+AcquireImages	Sequencer/Sequencer.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapGenTL)$/;"	f
+AcquireImages	Sequencer_C/Sequencer_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	Trigger/Trigger.cpp	/^int AcquireImages(CameraPtr pCam, INodeMap & nodeMap, INodeMap & nodeMapTLDevice)$/;"	f
+AcquireImages	Trigger_C/Trigger_C.cpp	/^spinError AcquireImages(spinCamera hCam, spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice)$/;"	f
+AcquireImages	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^spinError AcquireImages(spinCamera hCam, quickSpin qs, quickSpinTLDevice qsD)$/;"	f
+AcquireImages	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int AcquireImages(CameraPtr pCam)$/;"	f
+CC	Abhi_test1/Makefile	/^CC = g++ ${CFLAGS} -ggdb ${CVFLAGS}$/;"	m
+CC	Abhi_test2/Makefile	/^CC = g++ ${CFLAGS} -ggdb ${CVFLAGS}$/;"	m
+CC	Abhi_test3/Makefile	/^CC = g++ ${CFLAGS} -ggdb ${CVFLAGS}$/;"	m
+CC	Acquisition/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	AcquisitionMultipleCamera/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	AcquisitionMultipleCamera_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Acquisition_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ChunkData/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ChunkData_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	DeviceEvents/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	DeviceEvents_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Enumeration/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	EnumerationEvents/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	EnumerationEvents_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Enumeration_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Enumeration_C_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Enumeration_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Exposure/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Exposure_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Exposure_C_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Exposure_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ImageEvents/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ImageEvents_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ImageFormatControl/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ImageFormatControl_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ImageFormatControl_C_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	ImageFormatControl_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Logging/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Logging_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	LookupTable/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	LookupTable_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	NodeMapCallback/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	NodeMapCallback_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	NodeMapInfo/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	NodeMapInfo_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	NodeMapInfo_C_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	NodeMapInfo_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	SaveToAvi/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	SaveToAvi_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Sequencer/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Sequencer_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Trigger/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Trigger_C/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Trigger_C_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CC	Trigger_QuickSpin/Makefile	/^CC = g++ ${CFLAGS}$/;"	m
+CVFLAGS	Abhi_test1/Makefile	/^CVFLAGS = `pkg-config --cflags opencv`$/;"	m
+CVFLAGS	Abhi_test2/Makefile	/^CVFLAGS = `pkg-config --cflags opencv`$/;"	m
+CVFLAGS	Abhi_test3/Makefile	/^CVFLAGS = `pkg-config --cflags opencv`$/;"	m
+CV_LIB	Abhi_test1/Makefile	/^CV_LIB = `pkg-config --libs opencv`${D}$/;"	m
+CV_LIB	Abhi_test2/Makefile	/^CV_LIB = `pkg-config --libs opencv`${D}$/;"	m
+CV_LIB	Abhi_test3/Makefile	/^CV_LIB = `pkg-config --libs opencv`${D}$/;"	m
+ChangeHeightAndGain	NodeMapCallback/NodeMapCallback.cpp	/^int ChangeHeightAndGain(INodeMap & nodeMap)$/;"	f
+ChangeHeightAndGain	NodeMapCallback_C/NodeMapCallback_C.cpp	/^spinError ChangeHeightAndGain(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureCallbacks	NodeMapCallback/NodeMapCallback.cpp	/^int ConfigureCallbacks(INodeMap & nodeMap, int64_t & callbackHeight, int64_t & callbackGain)$/;"	f
+ConfigureCallbacks	NodeMapCallback_C/NodeMapCallback_C.cpp	/^spinError ConfigureCallbacks(spinNodeMapHandle hNodeMap, spinNodeCallbackHandle* callbackHeight, spinNodeCallbackHandle* callbackGain)$/;"	f
+ConfigureChunkData	ChunkData/ChunkData.cpp	/^int ConfigureChunkData(INodeMap & nodeMap)$/;"	f
+ConfigureChunkData	ChunkData_C/ChunkData_C.cpp	/^spinError ConfigureChunkData(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureCustomImageSettings	ImageFormatControl/ImageFormatControl.cpp	/^int ConfigureCustomImageSettings(INodeMap & nodeMap)$/;"	f
+ConfigureCustomImageSettings	ImageFormatControl_C/ImageFormatControl_C.cpp	/^spinError ConfigureCustomImageSettings(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureCustomImageSettings	ImageFormatControl_C_QuickSpin/ImageFormatControl_C_QuickSpin.cpp	/^spinError ConfigureCustomImageSettings(quickSpin qs)$/;"	f
+ConfigureCustomImageSettings	ImageFormatControl_QuickSpin/ImageFormatControl_QuickSpin.cpp	/^int ConfigureCustomImageSettings(CameraPtr pCam)$/;"	f
+ConfigureDeviceEvents	DeviceEvents/DeviceEvents.cpp	/^int ConfigureDeviceEvents(INodeMap & nodeMap, CameraPtr pCam, DeviceEventHandler*& deviceEventHandler)$/;"	f
+ConfigureDeviceEvents	DeviceEvents_C/DeviceEvents_C.cpp	/^spinError ConfigureDeviceEvents(spinNodeMapHandle hNodeMap, spinCamera hCam, spinDeviceEvent* deviceEvent, userData* eventInfo)$/;"	f
+ConfigureExposure	Exposure/Exposure.cpp	/^int ConfigureExposure(INodeMap & nodeMap)$/;"	f
+ConfigureExposure	Exposure_C/Exposure_C.cpp	/^spinError ConfigureExposure(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureExposure	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	/^spinError ConfigureExposure(quickSpin qs)$/;"	f
+ConfigureExposure	Exposure_QuickSpin/Exposure_QuickSpin.cpp	/^int ConfigureExposure(CameraPtr pCam)$/;"	f
+ConfigureImageEvents	ImageEvents/ImageEvents.cpp	/^int ConfigureImageEvents(CameraPtr pCam, ImageEventHandler*& imageEventHandler)$/;"	f
+ConfigureImageEvents	ImageEvents_C/ImageEvents_C.cpp	/^spinError ConfigureImageEvents(spinCamera hCam, spinNodeMapHandle hNodeMapTLDevice, spinImageEvent* imageEvent, userData* imageEventInfo)$/;"	f
+ConfigureLookupTables	LookupTable/LookupTable.cpp	/^int ConfigureLookupTables(INodeMap & nodeMap)$/;"	f
+ConfigureLookupTables	LookupTable_C/LookupTable_C.cpp	/^spinError ConfigureLookupTables(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureSequencerPartOne	Sequencer/Sequencer.cpp	/^int ConfigureSequencerPartOne(INodeMap & nodeMap)$/;"	f
+ConfigureSequencerPartOne	Sequencer_C/Sequencer_C.cpp	/^spinError ConfigureSequencerPartOne(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureSequencerPartTwo	Sequencer/Sequencer.cpp	/^int ConfigureSequencerPartTwo(INodeMap & nodeMap)$/;"	f
+ConfigureSequencerPartTwo	Sequencer_C/Sequencer_C.cpp	/^spinError ConfigureSequencerPartTwo(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureTrigger	Abhi_test3/Abhi_test3.cpp	/^int ConfigureTrigger(INodeMap & nodeMap)$/;"	f
+ConfigureTrigger	Trigger/Trigger.cpp	/^int ConfigureTrigger(INodeMap & nodeMap)$/;"	f
+ConfigureTrigger	Trigger_C/Trigger_C.cpp	/^spinError ConfigureTrigger(spinNodeMapHandle hNodeMap)$/;"	f
+ConfigureTrigger	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^spinError ConfigureTrigger(quickSpin qs)$/;"	f
+ConfigureTrigger	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int ConfigureTrigger(CameraPtr pCam)$/;"	f
+DeviceEventHandler	DeviceEvents/DeviceEvents.cpp	/^	DeviceEventHandler(gcstring eventName) { m_eventName = eventName; m_count = 0; }$/;"	f	class:DeviceEventHandler
+DeviceEventHandler	DeviceEvents/DeviceEvents.cpp	/^class DeviceEventHandler : public DeviceEvent$/;"	c	file:
+DisplayChunkData	ChunkData/ChunkData.cpp	/^int DisplayChunkData(INodeMap & nodeMap)$/;"	f
+DisplayChunkData	ChunkData/ChunkData.cpp	/^int DisplayChunkData(ImagePtr pImage)$/;"	f
+DisplayChunkDataFromImage	ChunkData_C/ChunkData_C.cpp	/^spinError DisplayChunkDataFromImage(spinImage hImage)$/;"	f
+DisplayChunkDataFromNodeMap	ChunkData_C/ChunkData_C.cpp	/^spinError DisplayChunkDataFromNodeMap(spinNodeMapHandle hNodeMap)$/;"	f
+GENERIC	DeviceEvents/DeviceEvents.cpp	/^	GENERIC,$/;"	e	enum:eventType	file:
+GENERIC	DeviceEvents_C/DeviceEvents_C.cpp	/^	GENERIC,$/;"	e	enum:_deviceEventType	file:
+GrabNextImageByTrigger	Abhi_test3/Abhi_test3.cpp	/^int GrabNextImageByTrigger(INodeMap & nodeMap, CameraPtr pCam)$/;"	f
+GrabNextImageByTrigger	Trigger/Trigger.cpp	/^int GrabNextImageByTrigger(INodeMap & nodeMap, CameraPtr pCam)$/;"	f
+GrabNextImageByTrigger	Trigger_C/Trigger_C.cpp	/^spinError GrabNextImageByTrigger(spinNodeMapHandle hNodeMap, spinCamera hCam)$/;"	f
+GrabNextImageByTrigger	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^spinError GrabNextImageByTrigger(quickSpin qs)$/;"	f
+GrabNextImageByTrigger	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int GrabNextImageByTrigger(CameraPtr pCam, ImagePtr & pResultImage)$/;"	f
+H264	SaveToAvi/SaveToAvi.cpp	/^	H264$/;"	e	enum:aviType	file:
+H264	SaveToAvi_C/SaveToAvi_C.cpp	/^	H264$/;"	e	enum:_fileType	file:
+HARDWARE	Abhi_test3/Abhi_test3.cpp	/^	HARDWARE$/;"	e	enum:triggerType	file:
+HARDWARE	Trigger/Trigger.cpp	/^	HARDWARE$/;"	e	enum:triggerType	file:
+HARDWARE	Trigger_C/Trigger_C.cpp	/^	HARDWARE$/;"	e	enum:_triggerType	file:
+HARDWARE	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^	HARDWARE$/;"	e	enum:_triggerType	file:
+HARDWARE	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^	HARDWARE$/;"	e	enum:triggerType	file:
+IMAGE	ChunkData/ChunkData.cpp	/^	IMAGE,$/;"	e	enum:chunkDataType	file:
+IMAGE	ChunkData_C/ChunkData_C.cpp	/^	IMAGE,$/;"	e	enum:_chunkDataType	file:
+INC	Abhi_test1/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Abhi_test2/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Abhi_test3/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Acquisition/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	AcquisitionMultipleCamera/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	AcquisitionMultipleCamera_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Acquisition_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	ChunkData/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	ChunkData_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	DeviceEvents/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	DeviceEvents_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Enumeration/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	EnumerationEvents/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	EnumerationEvents_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Enumeration_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Enumeration_C_QuickSpin/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Enumeration_QuickSpin/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Exposure/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Exposure_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Exposure_C_QuickSpin/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Exposure_QuickSpin/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	ImageEvents/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	ImageEvents_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	ImageFormatControl/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	ImageFormatControl_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	ImageFormatControl_C_QuickSpin/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	ImageFormatControl_QuickSpin/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Logging/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Logging_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	LookupTable/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	LookupTable_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	NodeMapCallback/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	NodeMapCallback_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	NodeMapInfo/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	NodeMapInfo_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	NodeMapInfo_C_QuickSpin/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	NodeMapInfo_QuickSpin/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	SaveToAvi/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	SaveToAvi_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Sequencer/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Sequencer_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Trigger/Makefile	/^INC = -I..\/..\/include$/;"	m
+INC	Trigger_C/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Trigger_C_QuickSpin/Makefile	/^INC = -I..\/..\/include\/spinc$/;"	m
+INC	Trigger_QuickSpin/Makefile	/^INC = -I..\/..\/include$/;"	m
+INDIVIDUAL	NodeMapInfo/NodeMapInfo.cpp	/^	INDIVIDUAL$/;"	e	enum:readType	file:
+INDIVIDUAL	NodeMapInfo_C/NodeMapInfo_C.cpp	/^	INDIVIDUAL$/;"	e	enum:_readType	file:
+ImageEventHandler	ImageEvents/ImageEvents.cpp	/^	ImageEventHandler(CameraPtr pCam) $/;"	f	class:ImageEventHandler
+ImageEventHandler	ImageEvents/ImageEvents.cpp	/^class ImageEventHandler : public ImageEvent$/;"	c	file:
+InterfaceEventHandler	EnumerationEvents/EnumerationEvents.cpp	/^	InterfaceEventHandler(InterfacePtr iface, unsigned int interfaceNum) : m_interface(iface), m_interfaceNum(interfaceNum) {};$/;"	f	class:InterfaceEventHandler
+InterfaceEventHandler	EnumerationEvents/EnumerationEvents.cpp	/^class InterfaceEventHandler : public InterfaceEvent$/;"	c	file:
+LoggingEventHandler	Logging/Logging.cpp	/^class LoggingEventHandler : public LoggingEvent$/;"	c	file:
+MAX_BUFF_LEN	AcquisitionMultipleCamera_C/AcquisitionMultipleCamera_C.cpp	45;"	d	file:
+MAX_BUFF_LEN	Acquisition_C/Acquisition_C.cpp	54;"	d	file:
+MAX_BUFF_LEN	ChunkData_C/ChunkData_C.cpp	52;"	d	file:
+MAX_BUFF_LEN	DeviceEvents_C/DeviceEvents_C.cpp	53;"	d	file:
+MAX_BUFF_LEN	EnumerationEvents_C/EnumerationEvents_C.cpp	53;"	d	file:
+MAX_BUFF_LEN	Enumeration_C/Enumeration_C.cpp	52;"	d	file:
+MAX_BUFF_LEN	Enumeration_C_QuickSpin/Enumeration_C_QuickSpin.cpp	54;"	d	file:
+MAX_BUFF_LEN	Exposure_C/Exposure_C.cpp	55;"	d	file:
+MAX_BUFF_LEN	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	52;"	d	file:
+MAX_BUFF_LEN	ImageEvents_C/ImageEvents_C.cpp	66;"	d	file:
+MAX_BUFF_LEN	ImageFormatControl_C/ImageFormatControl_C.cpp	53;"	d	file:
+MAX_BUFF_LEN	ImageFormatControl_C_QuickSpin/ImageFormatControl_C_QuickSpin.cpp	53;"	d	file:
+MAX_BUFF_LEN	Logging_C/Logging_C.cpp	51;"	d	file:
+MAX_BUFF_LEN	LookupTable_C/LookupTable_C.cpp	51;"	d	file:
+MAX_BUFF_LEN	NodeMapCallback_C/NodeMapCallback_C.cpp	52;"	d	file:
+MAX_BUFF_LEN	NodeMapInfo_C/NodeMapInfo_C.cpp	56;"	d	file:
+MAX_BUFF_LEN	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	52;"	d	file:
+MAX_BUFF_LEN	SaveToAvi_C/SaveToAvi_C.cpp	46;"	d	file:
+MAX_BUFF_LEN	Sequencer_C/Sequencer_C.cpp	56;"	d	file:
+MAX_BUFF_LEN	Trigger_C/Trigger_C.cpp	49;"	d	file:
+MAX_BUFF_LEN	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	52;"	d	file:
+MAX_CHARS	NodeMapInfo/NodeMapInfo.cpp	53;"	d	file:
+MAX_CHARS	NodeMapInfo_C/NodeMapInfo_C.cpp	60;"	d	file:
+MAX_CHARS	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	56;"	d	file:
+MJPG	SaveToAvi/SaveToAvi.cpp	/^	MJPG,$/;"	e	enum:aviType	file:
+MJPG	SaveToAvi_C/SaveToAvi_C.cpp	/^	MJPG,$/;"	e	enum:_fileType	file:
+NODEMAP	ChunkData/ChunkData.cpp	/^	NODEMAP$/;"	e	enum:chunkDataType	file:
+NODEMAP	ChunkData_C/ChunkData_C.cpp	/^	NODEMAP$/;"	e	enum:_chunkDataType	file:
+NUM_IMAGES	SaveToAvi_C/SaveToAvi_C.cpp	47;"	d	file:
+OBJ	Abhi_test1/Makefile	/^OBJ = Abhi_test1.o$/;"	m
+OBJ	Abhi_test2/Makefile	/^OBJ = Abhi_test2.o$/;"	m
+OBJ	Abhi_test3/Makefile	/^OBJ = Abhi_test3.o$/;"	m
+OBJ	Acquisition/Makefile	/^OBJ = Acquisition.o$/;"	m
+OBJ	AcquisitionMultipleCamera/Makefile	/^OBJ = AcquisitionMultipleCamera.o$/;"	m
+OBJ	AcquisitionMultipleCamera_C/Makefile	/^OBJ = AcquisitionMultipleCamera_C.o$/;"	m
+OBJ	Acquisition_C/Makefile	/^OBJ = Acquisition_C.o$/;"	m
+OBJ	ChunkData/Makefile	/^OBJ = ChunkData.o$/;"	m
+OBJ	ChunkData_C/Makefile	/^OBJ = ChunkData_C.o$/;"	m
+OBJ	DeviceEvents/Makefile	/^OBJ = DeviceEvents.o$/;"	m
+OBJ	DeviceEvents_C/Makefile	/^OBJ = DeviceEvents_C.o$/;"	m
+OBJ	Enumeration/Makefile	/^OBJ = Enumeration.o$/;"	m
+OBJ	EnumerationEvents/Makefile	/^OBJ = EnumerationEvents.o$/;"	m
+OBJ	EnumerationEvents_C/Makefile	/^OBJ = EnumerationEvents_C.o$/;"	m
+OBJ	Enumeration_C/Makefile	/^OBJ = Enumeration_C.o$/;"	m
+OBJ	Enumeration_C_QuickSpin/Makefile	/^OBJ = Enumeration_C_QuickSpin.o$/;"	m
+OBJ	Enumeration_QuickSpin/Makefile	/^OBJ = Enumeration_QuickSpin.o$/;"	m
+OBJ	Exposure/Makefile	/^OBJ = Exposure.o$/;"	m
+OBJ	Exposure_C/Makefile	/^OBJ = Exposure_C.o$/;"	m
+OBJ	Exposure_C_QuickSpin/Makefile	/^OBJ = Exposure_C_QuickSpin.o$/;"	m
+OBJ	Exposure_QuickSpin/Makefile	/^OBJ = Exposure_QuickSpin.o$/;"	m
+OBJ	ImageEvents/Makefile	/^OBJ = ImageEvents.o$/;"	m
+OBJ	ImageEvents_C/Makefile	/^OBJ = ImageEvents_C.o$/;"	m
+OBJ	ImageFormatControl/Makefile	/^OBJ = ImageFormatControl.o$/;"	m
+OBJ	ImageFormatControl_C/Makefile	/^OBJ = ImageFormatControl_C.o$/;"	m
+OBJ	ImageFormatControl_C_QuickSpin/Makefile	/^OBJ = ImageFormatControl_C_QuickSpin.o$/;"	m
+OBJ	ImageFormatControl_QuickSpin/Makefile	/^OBJ = ImageFormatControl_QuickSpin.o$/;"	m
+OBJ	Logging/Makefile	/^OBJ = Logging.o$/;"	m
+OBJ	Logging_C/Makefile	/^OBJ = Logging_C.o$/;"	m
+OBJ	LookupTable/Makefile	/^OBJ = LookupTable.o$/;"	m
+OBJ	LookupTable_C/Makefile	/^OBJ = LookupTable_C.o$/;"	m
+OBJ	NodeMapCallback/Makefile	/^OBJ = NodeMapCallback.o$/;"	m
+OBJ	NodeMapCallback_C/Makefile	/^OBJ = NodeMapCallback_C.o$/;"	m
+OBJ	NodeMapInfo/Makefile	/^OBJ = NodeMapInfo.o$/;"	m
+OBJ	NodeMapInfo_C/Makefile	/^OBJ = NodeMapInfo_C.o$/;"	m
+OBJ	NodeMapInfo_C_QuickSpin/Makefile	/^OBJ = NodeMapInfo_C_QuickSpin.o$/;"	m
+OBJ	NodeMapInfo_QuickSpin/Makefile	/^OBJ = NodeMapInfo_QuickSpin.o$/;"	m
+OBJ	SaveToAvi/Makefile	/^OBJ = SaveToAvi.o$/;"	m
+OBJ	SaveToAvi_C/Makefile	/^OBJ = SaveToAvi_C.o$/;"	m
+OBJ	Sequencer/Makefile	/^OBJ = Sequencer.o$/;"	m
+OBJ	Sequencer_C/Makefile	/^OBJ = Sequencer_C.o$/;"	m
+OBJ	Trigger/Makefile	/^OBJ = Trigger.o$/;"	m
+OBJ	Trigger_C/Makefile	/^OBJ = Trigger_C.o$/;"	m
+OBJ	Trigger_C_QuickSpin/Makefile	/^OBJ = Trigger_C_QuickSpin.o$/;"	m
+OBJ	Trigger_QuickSpin/Makefile	/^OBJ = Trigger_QuickSpin.o$/;"	m
+OUTDIR	Abhi_test1/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Abhi_test2/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Abhi_test3/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Acquisition/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	AcquisitionMultipleCamera/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	AcquisitionMultipleCamera_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Acquisition_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ChunkData/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ChunkData_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	DeviceEvents/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	DeviceEvents_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Enumeration/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	EnumerationEvents/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	EnumerationEvents_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Enumeration_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Enumeration_C_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Enumeration_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Exposure/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Exposure_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Exposure_C_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Exposure_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ImageEvents/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ImageEvents_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ImageFormatControl/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ImageFormatControl_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ImageFormatControl_C_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	ImageFormatControl_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Logging/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Logging_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	LookupTable/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	LookupTable_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	NodeMapCallback/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	NodeMapCallback_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	NodeMapInfo/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	NodeMapInfo_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	NodeMapInfo_C_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	NodeMapInfo_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	SaveToAvi/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	SaveToAvi_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Sequencer/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Sequencer_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Trigger/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Trigger_C/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Trigger_C_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTDIR	Trigger_QuickSpin/Makefile	/^OUTDIR = ..\/..\/bin$/;"	m
+OUTPUTNAME	Abhi_test1/Makefile	/^OUTPUTNAME = Abhi_test1${D}$/;"	m
+OUTPUTNAME	Abhi_test2/Makefile	/^OUTPUTNAME = Abhi_test2${D}$/;"	m
+OUTPUTNAME	Abhi_test3/Makefile	/^OUTPUTNAME = Abhi_test3${D}$/;"	m
+OUTPUTNAME	Acquisition/Makefile	/^OUTPUTNAME = Acquisition${D}$/;"	m
+OUTPUTNAME	AcquisitionMultipleCamera/Makefile	/^OUTPUTNAME = AcquisitionMultipleCamera${D}$/;"	m
+OUTPUTNAME	AcquisitionMultipleCamera_C/Makefile	/^OUTPUTNAME = AcquisitionMultipleCamera_C${D}$/;"	m
+OUTPUTNAME	Acquisition_C/Makefile	/^OUTPUTNAME = Acquisition_C${D}$/;"	m
+OUTPUTNAME	ChunkData/Makefile	/^OUTPUTNAME = ChunkData${D}$/;"	m
+OUTPUTNAME	ChunkData_C/Makefile	/^OUTPUTNAME = ChunkData_C${D}$/;"	m
+OUTPUTNAME	DeviceEvents/Makefile	/^OUTPUTNAME = DeviceEvents${D}$/;"	m
+OUTPUTNAME	DeviceEvents_C/Makefile	/^OUTPUTNAME = DeviceEvents_C${D}$/;"	m
+OUTPUTNAME	Enumeration/Makefile	/^OUTPUTNAME = Enumeration${D}$/;"	m
+OUTPUTNAME	EnumerationEvents/Makefile	/^OUTPUTNAME = EnumerationEvents${D}$/;"	m
+OUTPUTNAME	EnumerationEvents_C/Makefile	/^OUTPUTNAME = EnumerationEvents_C${D}$/;"	m
+OUTPUTNAME	Enumeration_C/Makefile	/^OUTPUTNAME = Enumeration_C${D}$/;"	m
+OUTPUTNAME	Enumeration_C_QuickSpin/Makefile	/^OUTPUTNAME = Enumeration_C_QuickSpin${D}$/;"	m
+OUTPUTNAME	Enumeration_QuickSpin/Makefile	/^OUTPUTNAME = Enumeration_QuickSpin${D}$/;"	m
+OUTPUTNAME	Exposure/Makefile	/^OUTPUTNAME = Exposure${D}$/;"	m
+OUTPUTNAME	Exposure_C/Makefile	/^OUTPUTNAME = Exposure_C${D}$/;"	m
+OUTPUTNAME	Exposure_C_QuickSpin/Makefile	/^OUTPUTNAME = Exposure_C_QuickSpin${D}$/;"	m
+OUTPUTNAME	Exposure_QuickSpin/Makefile	/^OUTPUTNAME = Exposure_QuickSpin${D}$/;"	m
+OUTPUTNAME	ImageEvents/Makefile	/^OUTPUTNAME = ImageEvents${D}$/;"	m
+OUTPUTNAME	ImageEvents_C/Makefile	/^OUTPUTNAME = ImageEvents_C${D}$/;"	m
+OUTPUTNAME	ImageFormatControl/Makefile	/^OUTPUTNAME = ImageFormatControl${D}$/;"	m
+OUTPUTNAME	ImageFormatControl_C/Makefile	/^OUTPUTNAME = ImageFormatControl_C${D}$/;"	m
+OUTPUTNAME	ImageFormatControl_C_QuickSpin/Makefile	/^OUTPUTNAME = ImageFormatControl_C_QuickSpin${D}$/;"	m
+OUTPUTNAME	ImageFormatControl_QuickSpin/Makefile	/^OUTPUTNAME = ImageFormatControl_QuickSpin${D}$/;"	m
+OUTPUTNAME	Logging/Makefile	/^OUTPUTNAME = Logging${D}$/;"	m
+OUTPUTNAME	Logging_C/Makefile	/^OUTPUTNAME = Logging_C${D}$/;"	m
+OUTPUTNAME	LookupTable/Makefile	/^OUTPUTNAME = LookupTable${D}$/;"	m
+OUTPUTNAME	LookupTable_C/Makefile	/^OUTPUTNAME = LookupTable_C${D}$/;"	m
+OUTPUTNAME	NodeMapCallback/Makefile	/^OUTPUTNAME = NodeMapCallback${D}$/;"	m
+OUTPUTNAME	NodeMapCallback_C/Makefile	/^OUTPUTNAME = NodeMapCallback_C${D}$/;"	m
+OUTPUTNAME	NodeMapInfo/Makefile	/^OUTPUTNAME = NodeMapInfo${D}$/;"	m
+OUTPUTNAME	NodeMapInfo_C/Makefile	/^OUTPUTNAME = NodeMapInfo_C${D}$/;"	m
+OUTPUTNAME	NodeMapInfo_C_QuickSpin/Makefile	/^OUTPUTNAME = NodeMapInfo_C_QuickSpin${D}$/;"	m
+OUTPUTNAME	NodeMapInfo_QuickSpin/Makefile	/^OUTPUTNAME = NodeMapInfo_QuickSpin${D}$/;"	m
+OUTPUTNAME	SaveToAvi/Makefile	/^OUTPUTNAME = SaveToAvi${D}$/;"	m
+OUTPUTNAME	SaveToAvi_C/Makefile	/^OUTPUTNAME = SaveToAvi_C${D}$/;"	m
+OUTPUTNAME	Sequencer/Makefile	/^OUTPUTNAME = Sequencer${D}$/;"	m
+OUTPUTNAME	Sequencer_C/Makefile	/^OUTPUTNAME = Sequencer_C${D}$/;"	m
+OUTPUTNAME	Trigger/Makefile	/^OUTPUTNAME = Trigger${D}$/;"	m
+OUTPUTNAME	Trigger_C/Makefile	/^OUTPUTNAME = Trigger_C${D}$/;"	m
+OUTPUTNAME	Trigger_C_QuickSpin/Makefile	/^OUTPUTNAME = Trigger_C_QuickSpin${D}$/;"	m
+OUTPUTNAME	Trigger_QuickSpin/Makefile	/^OUTPUTNAME = Trigger_QuickSpin${D}$/;"	m
+OnDeviceArrival	EnumerationEvents/EnumerationEvents.cpp	/^	void OnDeviceArrival()$/;"	f	class:InterfaceEventHandler
+OnDeviceArrival	EnumerationEvents/EnumerationEvents.cpp	/^	void OnDeviceArrival()$/;"	f	class:SystemEventHandler
+OnDeviceEvent	DeviceEvents/DeviceEvents.cpp	/^	void OnDeviceEvent(gcstring eventName)$/;"	f	class:DeviceEventHandler
+OnDeviceRemoval	EnumerationEvents/EnumerationEvents.cpp	/^	void OnDeviceRemoval(uint64_t deviceSerialNumber)$/;"	f	class:InterfaceEventHandler
+OnDeviceRemoval	EnumerationEvents/EnumerationEvents.cpp	/^	void OnDeviceRemoval(uint64_t deviceSerialNumber)$/;"	f	class:SystemEventHandler
+OnGainNodeUpdate	NodeMapCallback/NodeMapCallback.cpp	/^void OnGainNodeUpdate(INode* node)$/;"	f
+OnHeightNodeUpdate	NodeMapCallback/NodeMapCallback.cpp	/^void OnHeightNodeUpdate(INode* node)$/;"	f
+OnImageEvent	ImageEvents/ImageEvents.cpp	/^	void OnImageEvent(ImagePtr image)$/;"	f	class:ImageEventHandler
+OnLogEvent	Logging/Logging.cpp	/^	void OnLogEvent(LoggingEventDataPtr loggingEventDataPtr)$/;"	f	class:LoggingEventHandler	file:
+PrintDeviceInfo	Abhi_test1/Abhi_test1.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	Abhi_test2/Abhi_test2.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap, unsigned int camNum)$/;"	f
+PrintDeviceInfo	Acquisition/Acquisition.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	AcquisitionMultipleCamera/AcquisitionMultipleCamera.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap, unsigned int camNum)$/;"	f
+PrintDeviceInfo	AcquisitionMultipleCamera_C/AcquisitionMultipleCamera_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap, unsigned int camNum)$/;"	f
+PrintDeviceInfo	Acquisition_C/Acquisition_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	ChunkData/ChunkData.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	ChunkData_C/ChunkData_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	DeviceEvents/DeviceEvents.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	DeviceEvents_C/DeviceEvents_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	Exposure/Exposure.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	Exposure_C/Exposure_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	/^spinError PrintDeviceInfo(spinCamera hCamera)$/;"	f
+PrintDeviceInfo	Exposure_QuickSpin/Exposure_QuickSpin.cpp	/^int PrintDeviceInfo(CameraPtr pCam)$/;"	f
+PrintDeviceInfo	ImageEvents/ImageEvents.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	ImageEvents_C/ImageEvents_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	ImageFormatControl/ImageFormatControl.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	ImageFormatControl_C/ImageFormatControl_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	ImageFormatControl_C_QuickSpin/ImageFormatControl_C_QuickSpin.cpp	/^spinError PrintDeviceInfo(spinCamera hCamera)$/;"	f
+PrintDeviceInfo	ImageFormatControl_QuickSpin/ImageFormatControl_QuickSpin.cpp	/^int PrintDeviceInfo(CameraPtr pCam)$/;"	f
+PrintDeviceInfo	LookupTable/LookupTable.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	LookupTable_C/LookupTable_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	NodeMapCallback/NodeMapCallback.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	NodeMapCallback_C/NodeMapCallback_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	SaveToAvi/SaveToAvi.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	SaveToAvi_C/SaveToAvi_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	Sequencer/Sequencer.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	Sequencer_C/Sequencer_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	Trigger/Trigger.cpp	/^int PrintDeviceInfo(INodeMap & nodeMap)$/;"	f
+PrintDeviceInfo	Trigger_C/Trigger_C.cpp	/^spinError PrintDeviceInfo(spinNodeMapHandle hNodeMap)$/;"	f
+PrintDeviceInfo	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^spinError PrintDeviceInfo(spinCamera hCamera)$/;"	f
+PrintDeviceInfo	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int PrintDeviceInfo(CameraPtr pCam)$/;"	f
+PrintGenICamDeviceInfo	NodeMapInfo_QuickSpin/NodeMapInfo_QuickSpin.cpp	/^int PrintGenICamDeviceInfo(CameraPtr pCamera)$/;"	f
+PrintGenICamInfo	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	/^spinError PrintGenICamInfo(spinCamera hCamera)$/;"	f
+PrintTransportLayerDeviceInfo	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	/^spinError PrintTransportLayerDeviceInfo(spinCamera hCamera)$/;"	f
+PrintTransportLayerDeviceInfo	NodeMapInfo_QuickSpin/NodeMapInfo_QuickSpin.cpp	/^int PrintTransportLayerDeviceInfo(CameraPtr pCamera)$/;"	f
+PrintTransportLayerInterfaceInfo	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	/^spinError PrintTransportLayerInterfaceInfo(spinInterface hInterface)$/;"	f
+PrintTransportLayerInterfaceInfo	NodeMapInfo_QuickSpin/NodeMapInfo_QuickSpin.cpp	/^int PrintTransportLayerInterfaceInfo(InterfacePtr pInterface)$/;"	f
+PrintTransportLayerStreamInfo	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	/^spinError PrintTransportLayerStreamInfo(spinCamera hCamera)$/;"	f
+PrintTransportLayerStreamInfo	NodeMapInfo_QuickSpin/NodeMapInfo_QuickSpin.cpp	/^int PrintTransportLayerStreamInfo(CameraPtr pCamera)$/;"	f
+QueryInterface	Enumeration/Enumeration.cpp	/^int QueryInterface(InterfacePtr pInterface)$/;"	f
+QueryInterface	Enumeration_C/Enumeration_C.cpp	/^spinError QueryInterface(spinInterface hInterface)$/;"	f
+QueryInterface	Enumeration_C_QuickSpin/Enumeration_C_QuickSpin.cpp	/^spinError QueryInterface(spinInterface hInterface)$/;"	f
+QueryInterface	Enumeration_QuickSpin/Enumeration_QuickSpin.cpp	/^int QueryInterface(InterfacePtr pInterface)$/;"	f
+ResetCallbacks	NodeMapCallback/NodeMapCallback.cpp	/^int ResetCallbacks(INodeMap & nodeMap, int64_t & callbackHeight, int64_t & callbackGain)$/;"	f
+ResetCallbacks	NodeMapCallback_C/NodeMapCallback_C.cpp	/^spinError ResetCallbacks(spinNodeMapHandle hNodeMap, spinNodeCallbackHandle callbackHeight, spinNodeCallbackHandle callbackGain)$/;"	f
+ResetDeviceEvents	DeviceEvents/DeviceEvents.cpp	/^int ResetDeviceEvents(CameraPtr pCam, DeviceEventHandler*& deviceEventHandler)$/;"	f
+ResetDeviceEvents	DeviceEvents_C/DeviceEvents_C.cpp	/^spinError ResetDeviceEvents(spinCamera hCam, spinDeviceEvent deviceEvent)$/;"	f
+ResetExposure	Exposure/Exposure.cpp	/^int ResetExposure(INodeMap & nodeMap)$/;"	f
+ResetExposure	Exposure_C/Exposure_C.cpp	/^spinError ResetExposure(spinNodeHandle hNodeMap)$/;"	f
+ResetExposure	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	/^spinError ResetExposure(quickSpin qs)$/;"	f
+ResetExposure	Exposure_QuickSpin/Exposure_QuickSpin.cpp	/^int ResetExposure(CameraPtr pCam)$/;"	f
+ResetImageEvents	ImageEvents/ImageEvents.cpp	/^int ResetImageEvents(CameraPtr pCam, ImageEventHandler*& imageEventHandler)$/;"	f
+ResetImageEvents	ImageEvents_C/ImageEvents_C.cpp	/^spinError ResetImageEvents(spinCamera hCam, spinImageEvent imageEvent)$/;"	f
+ResetLookupTables	LookupTable/LookupTable.cpp	/^int ResetLookupTables(INodeMap & nodeMap)$/;"	f
+ResetLookupTables	LookupTable_C/LookupTable_C.cpp	/^spinError ResetLookupTables(spinNodeMapHandle hNodeMap)$/;"	f
+ResetSequencer	Sequencer/Sequencer.cpp	/^int ResetSequencer(INodeMap & nodeMap)$/;"	f
+ResetSequencer	Sequencer_C/Sequencer_C.cpp	/^spinError ResetSequencer(spinNodeMapHandle hNodeMap)$/;"	f
+ResetTrigger	Abhi_test3/Abhi_test3.cpp	/^int ResetTrigger(INodeMap & nodeMap)$/;"	f
+ResetTrigger	Trigger/Trigger.cpp	/^int ResetTrigger(INodeMap & nodeMap)$/;"	f
+ResetTrigger	Trigger_C/Trigger_C.cpp	/^spinError ResetTrigger(spinNodeMapHandle hNodeMap)$/;"	f
+ResetTrigger	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^spinError ResetTrigger(quickSpin qs)$/;"	f
+ResetTrigger	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int ResetTrigger(CameraPtr pCam)$/;"	f
+RunMultipleCameras	Abhi_test2/Abhi_test2.cpp	/^int RunMultipleCameras(CameraList camList)$/;"	f
+RunMultipleCameras	Abhi_test3/Abhi_test3.cpp	/^int RunMultipleCameras(CameraList camList)$/;"	f
+RunMultipleCameras	AcquisitionMultipleCamera/AcquisitionMultipleCamera.cpp	/^int RunMultipleCameras(CameraList camList)$/;"	f
+RunMultipleCameras	AcquisitionMultipleCamera_C/AcquisitionMultipleCamera_C.cpp	/^spinError RunMultipleCameras(spinCameraList hCameraList, size_t numCameras)$/;"	f
+RunSingleCamera	Abhi_test1/Abhi_test1.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	Acquisition/Acquisition.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	Acquisition_C/Acquisition_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	ChunkData/ChunkData.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	ChunkData_C/ChunkData_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	DeviceEvents/DeviceEvents.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	DeviceEvents_C/DeviceEvents_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Exposure/Exposure.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	Exposure_C/Exposure_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Exposure_QuickSpin/Exposure_QuickSpin.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	ImageEvents/ImageEvents.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	ImageEvents_C/ImageEvents_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	ImageFormatControl/ImageFormatControl.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	ImageFormatControl_C/ImageFormatControl_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	ImageFormatControl_C_QuickSpin/ImageFormatControl_C_QuickSpin.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	ImageFormatControl_QuickSpin/ImageFormatControl_QuickSpin.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	LookupTable/LookupTable.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	LookupTable_C/LookupTable_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	NodeMapCallback/NodeMapCallback.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	NodeMapCallback_C/NodeMapCallback_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	NodeMapInfo/NodeMapInfo.cpp	/^int RunSingleCamera(CameraPtr cam)$/;"	f
+RunSingleCamera	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	SaveToAvi/SaveToAvi.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	SaveToAvi_C/SaveToAvi_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Sequencer/Sequencer.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	Sequencer_C/Sequencer_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Trigger/Trigger.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+RunSingleCamera	Trigger_C/Trigger_C.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^spinError RunSingleCamera(spinCamera hCam)$/;"	f
+RunSingleCamera	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int RunSingleCamera(CameraPtr pCam)$/;"	f
+SOFTWARE	Abhi_test3/Abhi_test3.cpp	/^	SOFTWARE,$/;"	e	enum:triggerType	file:
+SOFTWARE	Trigger/Trigger.cpp	/^	SOFTWARE,$/;"	e	enum:triggerType	file:
+SOFTWARE	Trigger_C/Trigger_C.cpp	/^	SOFTWARE,$/;"	e	enum:_triggerType	file:
+SOFTWARE	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^	SOFTWARE,$/;"	e	enum:_triggerType	file:
+SOFTWARE	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^	SOFTWARE,$/;"	e	enum:triggerType	file:
+SPECIFIC	DeviceEvents/DeviceEvents.cpp	/^	SPECIFIC$/;"	e	enum:eventType	file:
+SPECIFIC	DeviceEvents_C/DeviceEvents_C.cpp	/^	SPECIFIC$/;"	e	enum:_deviceEventType	file:
+SPINNAKER_LIB	Abhi_test1/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Abhi_test2/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Abhi_test3/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Acquisition/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	AcquisitionMultipleCamera/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	AcquisitionMultipleCamera_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Acquisition_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	ChunkData/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	ChunkData_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	DeviceEvents/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	DeviceEvents_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Enumeration/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	EnumerationEvents/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	EnumerationEvents_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Enumeration_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Enumeration_C_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Enumeration_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Exposure/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Exposure_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Exposure_C_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Exposure_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	ImageEvents/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	ImageEvents_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	ImageFormatControl/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	ImageFormatControl_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	ImageFormatControl_C_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	ImageFormatControl_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Logging/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Logging_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	LookupTable/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	LookupTable_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	NodeMapCallback/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	NodeMapCallback_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	NodeMapInfo/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	NodeMapInfo_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	NodeMapInfo_C_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	NodeMapInfo_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	SaveToAvi/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	SaveToAvi_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Sequencer/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Sequencer_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Trigger/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SPINNAKER_LIB	Trigger_C/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Trigger_C_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D} -lSpinnaker_C${D}$/;"	m
+SPINNAKER_LIB	Trigger_QuickSpin/Makefile	/^SPINNAKER_LIB = -L..\/..\/lib -lSpinnaker${D}$/;"	m
+SaveArrayToAVI	SaveToAvi_C/SaveToAvi_C.cpp	/^spinError SaveArrayToAVI(spinNodeMapHandle hNodeMap, spinNodeMapHandle hNodeMapTLDevice, spinImage hImages[])$/;"	f
+SaveVectorToAVI	SaveToAvi/SaveToAvi.cpp	/^int SaveVectorToAVI(INodeMap & nodeMap, INodeMap & nodeMapTLDevice, vector<ImagePtr> & images)$/;"	f
+SetSingleState	Sequencer/Sequencer.cpp	/^int SetSingleState(INodeMap & nodeMap, unsigned int sequenceNumber, int64_t widthToSet, int64_t heightToSet, double exposureTimeToSet, double gainToSet)$/;"	f
+SetSingleState	Sequencer_C/Sequencer_C.cpp	/^spinError SetSingleState(spinNodeMapHandle hNodeMap, unsigned int sequenceNumber, int64_t widthToSet, int64_t heightToSet, double exposureTimeToSet, double gainToSet)$/;"	f
+SleepyWrapper	ImageEvents/ImageEvents.cpp	/^void SleepyWrapper(int milliseconds)$/;"	f
+SleepyWrapper	ImageEvents_C/ImageEvents_C.cpp	/^void SleepyWrapper(int milliseconds)$/;"	f
+SystemEventHandler	EnumerationEvents/EnumerationEvents.cpp	/^	SystemEventHandler(SystemPtr system) : m_system(system) {};$/;"	f	class:SystemEventHandler
+SystemEventHandler	EnumerationEvents/EnumerationEvents.cpp	/^class SystemEventHandler : public ArrivalEvent, public RemovalEvent$/;"	c	file:
+UNCOMPRESSED	SaveToAvi/SaveToAvi.cpp	/^	UNCOMPRESSED,$/;"	e	enum:aviType	file:
+UNCOMPRESSED	SaveToAvi_C/SaveToAvi_C.cpp	/^	UNCOMPRESSED,$/;"	e	enum:_fileType	file:
+VALUE	NodeMapInfo/NodeMapInfo.cpp	/^	VALUE,$/;"	e	enum:readType	file:
+VALUE	NodeMapInfo_C/NodeMapInfo_C.cpp	/^	VALUE,$/;"	e	enum:_readType	file:
+VS_VERSION_INFO	LookupTable/resource.h	6;"	d
+VS_VERSION_INFO1	LookupTable/resource.h	5;"	d
+WaitForImages	ImageEvents/ImageEvents.cpp	/^int WaitForImages(ImageEventHandler*& imageEventHandler)$/;"	f
+WaitForImages	ImageEvents_C/ImageEvents_C.cpp	/^void WaitForImages(userData* imageEventInfo)$/;"	f
+_APS_NEXT_COMMAND_VALUE	Abhi_test1/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Abhi_test2/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Abhi_test3/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Acquisition/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	AcquisitionMultipleCamera/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	AcquisitionMultipleCamera_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Acquisition_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ChunkData/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ChunkData_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	DeviceEvents/resource.h	11;"	d
+_APS_NEXT_COMMAND_VALUE	DeviceEvents_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Enumeration/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	EnumerationEvents/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	EnumerationEvents_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Enumeration_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Enumeration_C_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Enumeration_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Exposure/resource.h	11;"	d
+_APS_NEXT_COMMAND_VALUE	Exposure_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Exposure_C_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Exposure_QuickSpin/resource.h	11;"	d
+_APS_NEXT_COMMAND_VALUE	ImageEvents/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ImageEvents_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ImageFormatControl/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ImageFormatControl_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ImageFormatControl_C_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	ImageFormatControl_QuickSpin/resource.h	11;"	d
+_APS_NEXT_COMMAND_VALUE	Logging/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Logging_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	LookupTable/resource.h	13;"	d
+_APS_NEXT_COMMAND_VALUE	LookupTable_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	NodeMapCallback/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	NodeMapCallback_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	NodeMapInfo/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	NodeMapInfo_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	NodeMapInfo_C_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	NodeMapInfo_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	SaveToAvi/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	SaveToAvi_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Sequencer/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Sequencer_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Trigger/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Trigger_C/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Trigger_C_QuickSpin/resource.h	10;"	d
+_APS_NEXT_COMMAND_VALUE	Trigger_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Abhi_test1/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Abhi_test2/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Abhi_test3/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Acquisition/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	AcquisitionMultipleCamera/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	AcquisitionMultipleCamera_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Acquisition_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ChunkData/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ChunkData_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	DeviceEvents/resource.h	12;"	d
+_APS_NEXT_CONTROL_VALUE	DeviceEvents_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Enumeration/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	EnumerationEvents/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	EnumerationEvents_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Enumeration_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Enumeration_C_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Enumeration_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Exposure/resource.h	12;"	d
+_APS_NEXT_CONTROL_VALUE	Exposure_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Exposure_C_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Exposure_QuickSpin/resource.h	12;"	d
+_APS_NEXT_CONTROL_VALUE	ImageEvents/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ImageEvents_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ImageFormatControl/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ImageFormatControl_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ImageFormatControl_C_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	ImageFormatControl_QuickSpin/resource.h	12;"	d
+_APS_NEXT_CONTROL_VALUE	Logging/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Logging_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	LookupTable/resource.h	14;"	d
+_APS_NEXT_CONTROL_VALUE	LookupTable_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	NodeMapCallback/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	NodeMapCallback_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	NodeMapInfo/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	NodeMapInfo_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	NodeMapInfo_C_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	NodeMapInfo_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	SaveToAvi/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	SaveToAvi_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Sequencer/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Sequencer_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Trigger/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Trigger_C/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Trigger_C_QuickSpin/resource.h	11;"	d
+_APS_NEXT_CONTROL_VALUE	Trigger_QuickSpin/resource.h	12;"	d
+_APS_NEXT_RESOURCE_VALUE	Abhi_test1/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Abhi_test2/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Abhi_test3/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Acquisition/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	AcquisitionMultipleCamera/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	AcquisitionMultipleCamera_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Acquisition_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ChunkData/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ChunkData_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	DeviceEvents/resource.h	10;"	d
+_APS_NEXT_RESOURCE_VALUE	DeviceEvents_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Enumeration/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	EnumerationEvents/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	EnumerationEvents_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Enumeration_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Enumeration_C_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Enumeration_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Exposure/resource.h	10;"	d
+_APS_NEXT_RESOURCE_VALUE	Exposure_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Exposure_C_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Exposure_QuickSpin/resource.h	10;"	d
+_APS_NEXT_RESOURCE_VALUE	ImageEvents/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ImageEvents_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ImageFormatControl/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ImageFormatControl_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ImageFormatControl_C_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	ImageFormatControl_QuickSpin/resource.h	10;"	d
+_APS_NEXT_RESOURCE_VALUE	Logging/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Logging_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	LookupTable/resource.h	12;"	d
+_APS_NEXT_RESOURCE_VALUE	LookupTable_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	NodeMapCallback/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	NodeMapCallback_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	NodeMapInfo/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	NodeMapInfo_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	NodeMapInfo_C_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	NodeMapInfo_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	SaveToAvi/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	SaveToAvi_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Sequencer/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Sequencer_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Trigger/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Trigger_C/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Trigger_C_QuickSpin/resource.h	9;"	d
+_APS_NEXT_RESOURCE_VALUE	Trigger_QuickSpin/resource.h	10;"	d
+_APS_NEXT_SYMED_VALUE	Abhi_test1/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Abhi_test2/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Abhi_test3/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Acquisition/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	AcquisitionMultipleCamera/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	AcquisitionMultipleCamera_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Acquisition_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ChunkData/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ChunkData_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	DeviceEvents/resource.h	13;"	d
+_APS_NEXT_SYMED_VALUE	DeviceEvents_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Enumeration/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	EnumerationEvents/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	EnumerationEvents_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Enumeration_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Enumeration_C_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Enumeration_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Exposure/resource.h	13;"	d
+_APS_NEXT_SYMED_VALUE	Exposure_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Exposure_C_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Exposure_QuickSpin/resource.h	13;"	d
+_APS_NEXT_SYMED_VALUE	ImageEvents/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ImageEvents_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ImageFormatControl/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ImageFormatControl_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ImageFormatControl_C_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	ImageFormatControl_QuickSpin/resource.h	13;"	d
+_APS_NEXT_SYMED_VALUE	Logging/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Logging_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	LookupTable/resource.h	15;"	d
+_APS_NEXT_SYMED_VALUE	LookupTable_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	NodeMapCallback/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	NodeMapCallback_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	NodeMapInfo/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	NodeMapInfo_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	NodeMapInfo_C_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	NodeMapInfo_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	SaveToAvi/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	SaveToAvi_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Sequencer/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Sequencer_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Trigger/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Trigger_C/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Trigger_C_QuickSpin/resource.h	12;"	d
+_APS_NEXT_SYMED_VALUE	Trigger_QuickSpin/resource.h	13;"	d
+_chunkDataType	ChunkData_C/ChunkData_C.cpp	/^typedef enum _chunkDataType$/;"	g	file:
+_deviceEventType	DeviceEvents_C/DeviceEvents_C.cpp	/^typedef enum _deviceEventType$/;"	g	file:
+_fileType	SaveToAvi_C/SaveToAvi_C.cpp	/^typedef enum _fileType$/;"	g	file:
+_readType	NodeMapInfo_C/NodeMapInfo_C.cpp	/^typedef enum _readType$/;"	g	file:
+_triggerType	Trigger_C/Trigger_C.cpp	/^typedef enum _triggerType$/;"	g	file:
+_triggerType	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^typedef enum _triggerType$/;"	g	file:
+_userData	DeviceEvents_C/DeviceEvents_C.cpp	/^typedef struct _userData$/;"	s	file:
+_userData	EnumerationEvents_C/EnumerationEvents_C.cpp	/^typedef struct _userData$/;"	s	file:
+_userData	ImageEvents_C/ImageEvents_C.cpp	/^typedef struct _userData$/;"	s	file:
+aviType	SaveToAvi/SaveToAvi.cpp	/^enum aviType$/;"	g	file:
+chosenAviType	SaveToAvi/SaveToAvi.cpp	/^const aviType chosenAviType = UNCOMPRESSED;$/;"	v
+chosenChunkData	ChunkData/ChunkData.cpp	/^const chunkDataType chosenChunkData = IMAGE;$/;"	v
+chosenChunkData	ChunkData_C/ChunkData_C.cpp	/^const chunkDataType chosenChunkData = IMAGE;$/;"	v
+chosenEvent	DeviceEvents/DeviceEvents.cpp	/^const eventType chosenEvent = GENERIC;$/;"	v
+chosenEvent	DeviceEvents_C/DeviceEvents_C.cpp	/^const deviceEventType chosenEvent = GENERIC;$/;"	v
+chosenFileType	SaveToAvi_C/SaveToAvi_C.cpp	/^const fileType chosenFileType = UNCOMPRESSED;$/;"	v
+chosenRead	NodeMapInfo/NodeMapInfo.cpp	/^const readType chosenRead = VALUE;$/;"	v
+chosenRead	NodeMapInfo_C/NodeMapInfo_C.cpp	/^const readType chosenRead = VALUE;$/;"	v
+chosenTrigger	Abhi_test3/Abhi_test3.cpp	/^const triggerType chosenTrigger = SOFTWARE;$/;"	v
+chosenTrigger	Trigger/Trigger.cpp	/^const triggerType chosenTrigger = SOFTWARE;$/;"	v
+chosenTrigger	Trigger_C/Trigger_C.cpp	/^const triggerType chosenTrigger = SOFTWARE;$/;"	v
+chosenTrigger	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^const triggerType chosenTrigger = SOFTWARE;$/;"	v
+chosenTrigger	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^const triggerType chosenTrigger = SOFTWARE;$/;"	v
+chunkDataType	ChunkData/ChunkData.cpp	/^enum chunkDataType$/;"	g	file:
+chunkDataType	ChunkData_C/ChunkData_C.cpp	/^} chunkDataType;$/;"	t	typeref:enum:_chunkDataType	file:
+count	DeviceEvents_C/DeviceEvents_C.cpp	/^	int count;$/;"	m	struct:_userData	file:
+deviceEventType	DeviceEvents_C/DeviceEvents_C.cpp	/^} deviceEventType;$/;"	t	typeref:enum:_deviceEventType	file:
+deviceSerialNumber	ImageEvents_C/ImageEvents_C.cpp	/^	char deviceSerialNumber[MAX_BUFF_LEN];$/;"	m	struct:_userData	file:
+eventName	DeviceEvents_C/DeviceEvents_C.cpp	/^	char eventName[MAX_BUFF_LEN];$/;"	m	struct:_userData	file:
+eventType	DeviceEvents/DeviceEvents.cpp	/^enum eventType$/;"	g	file:
+fileType	SaveToAvi_C/SaveToAvi_C.cpp	/^} fileType;$/;"	t	typeref:enum:_fileType	file:
+getImageCount	ImageEvents/ImageEvents.cpp	/^	int getImageCount()$/;"	f	class:ImageEventHandler
+getMaxImages	ImageEvents/ImageEvents.cpp	/^	int getMaxImages()$/;"	f	class:ImageEventHandler
+hInterface	EnumerationEvents_C/EnumerationEvents_C.cpp	/^	spinInterface hInterface;$/;"	m	struct:_userData	file:
+imageCnt	ImageEvents_C/ImageEvents_C.cpp	/^	unsigned int imageCnt;$/;"	m	struct:_userData	file:
+indent	NodeMapInfo/NodeMapInfo.cpp	/^void indent(unsigned int level)$/;"	f
+indent	NodeMapInfo_C/NodeMapInfo_C.cpp	/^void indent(unsigned int level)$/;"	f
+interfaceNum	EnumerationEvents_C/EnumerationEvents_C.cpp	/^	int interfaceNum;$/;"	m	struct:_userData	file:
+k_LoggingLevel	Logging/Logging.cpp	/^const SpinnakerLogLevel k_LoggingLevel = LOG_LEVEL_DEBUG;$/;"	v
+k_loggingLevel	Logging_C/Logging_C.cpp	/^const spinnakerLogLevel k_loggingLevel = LOG_LEVEL_DEBUG;$/;"	v
+lenDeviceSerialNumber	ImageEvents_C/ImageEvents_C.cpp	/^	size_t lenDeviceSerialNumber;$/;"	m	struct:_userData	file:
+m_count	DeviceEvents/DeviceEvents.cpp	/^	int m_count;$/;"	m	class:DeviceEventHandler	file:
+m_deviceSerialNumber	ImageEvents/ImageEvents.cpp	/^	string m_deviceSerialNumber;$/;"	m	class:ImageEventHandler	file:
+m_eventName	DeviceEvents/DeviceEvents.cpp	/^	gcstring m_eventName;$/;"	m	class:DeviceEventHandler	file:
+m_imageCnt	ImageEvents/ImageEvents.cpp	/^	unsigned int m_imageCnt;$/;"	m	class:ImageEventHandler	file:
+m_interface	EnumerationEvents/EnumerationEvents.cpp	/^	InterfacePtr m_interface;$/;"	m	class:InterfaceEventHandler	file:
+m_interfaceNum	EnumerationEvents/EnumerationEvents.cpp	/^	int m_interfaceNum;$/;"	m	class:InterfaceEventHandler	file:
+m_system	EnumerationEvents/EnumerationEvents.cpp	/^	SystemPtr m_system;$/;"	m	class:SystemEventHandler	file:
+main	Abhi_test1/Abhi_test1.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Abhi_test2/Abhi_test2.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Abhi_test3/Abhi_test3.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Acquisition/Acquisition.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	AcquisitionMultipleCamera/AcquisitionMultipleCamera.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	AcquisitionMultipleCamera_C/AcquisitionMultipleCamera_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Acquisition_C/Acquisition_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	ChunkData/ChunkData.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	ChunkData_C/ChunkData_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	DeviceEvents/DeviceEvents.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	DeviceEvents_C/DeviceEvents_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Enumeration/Enumeration.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	EnumerationEvents/EnumerationEvents.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	EnumerationEvents_C/EnumerationEvents_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Enumeration_C/Enumeration_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Enumeration_C_QuickSpin/Enumeration_C_QuickSpin.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Enumeration_QuickSpin/Enumeration_QuickSpin.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Exposure/Exposure.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Exposure_C/Exposure_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Exposure_C_QuickSpin/Exposure_C_QuickSpin.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Exposure_QuickSpin/Exposure_QuickSpin.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	ImageEvents/ImageEvents.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	ImageEvents_C/ImageEvents_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	ImageFormatControl/ImageFormatControl.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	ImageFormatControl_C/ImageFormatControl_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	ImageFormatControl_C_QuickSpin/ImageFormatControl_C_QuickSpin.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	ImageFormatControl_QuickSpin/ImageFormatControl_QuickSpin.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Logging/Logging.cpp	/^int main( int \/*argc*\/, char** \/*argv*\/ )$/;"	f
+main	Logging_C/Logging_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	LookupTable/LookupTable.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	LookupTable_C/LookupTable_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	NodeMapCallback/NodeMapCallback.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	NodeMapCallback_C/NodeMapCallback_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	NodeMapInfo/NodeMapInfo.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	NodeMapInfo_C/NodeMapInfo_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	NodeMapInfo_C_QuickSpin/NodeMapInfo_C_QuickSpin.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	NodeMapInfo_QuickSpin/NodeMapInfo_QuickSpin.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	SaveToAvi/SaveToAvi.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	SaveToAvi_C/SaveToAvi_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Sequencer/Sequencer.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Sequencer_C/Sequencer_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Trigger/Trigger.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+main	Trigger_C/Trigger_C.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^int main(\/*int argc, char** argv*\/)$/;"	f
+main	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^int main(int \/*argc*\/, char** \/*argv*\/)$/;"	f
+mk_numImages	ImageEvents/ImageEvents.cpp	/^	static const unsigned int mk_numImages = 10;$/;"	m	class:ImageEventHandler	file:
+numImages	ImageEvents_C/ImageEvents_C.cpp	/^	unsigned int numImages;$/;"	m	struct:_userData	file:
+onDeviceArrivalInterface	EnumerationEvents_C/EnumerationEvents_C.cpp	/^void onDeviceArrivalInterface(void* pUserData)$/;"	f
+onDeviceArrivalSystem	EnumerationEvents_C/EnumerationEvents_C.cpp	/^void onDeviceArrivalSystem(void* pUserData)$/;"	f
+onDeviceEvent	DeviceEvents_C/DeviceEvents_C.cpp	/^void onDeviceEvent(const spinDeviceEventData hEventData, const char* pEventName, void* pUserData)$/;"	f
+onDeviceRemovalInterface	EnumerationEvents_C/EnumerationEvents_C.cpp	/^void onDeviceRemovalInterface(uint64_t deviceSerialNumber, void* pUserData)$/;"	f
+onDeviceRemovalSystem	EnumerationEvents_C/EnumerationEvents_C.cpp	/^void onDeviceRemovalSystem(uint64_t deviceSerialNumber, void* pUserData)$/;"	f
+onGainNodeUpdate	NodeMapCallback_C/NodeMapCallback_C.cpp	/^void onGainNodeUpdate(spinNodeHandle hNode)$/;"	f
+onHeightNodeUpdate	NodeMapCallback_C/NodeMapCallback_C.cpp	/^void onHeightNodeUpdate(spinNodeHandle hNode) $/;"	f
+onImageEvent	ImageEvents_C/ImageEvents_C.cpp	/^void onImageEvent(spinImage hImage, void* pUserData)$/;"	f
+onLogEvent	Logging_C/Logging_C.cpp	/^void onLogEvent(const spinLogEventData hEventData, void* pUserData)$/;"	f
+printBooleanNode	NodeMapInfo/NodeMapInfo.cpp	/^int printBooleanNode(CNodePtr node, unsigned int level)$/;"	f
+printBooleanNode	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printBooleanNode(spinNodeHandle hNode, unsigned int level)$/;"	f
+printCategoryNodeAndAllFeatures	NodeMapInfo/NodeMapInfo.cpp	/^int printCategoryNodeAndAllFeatures(CNodePtr node, unsigned int level)$/;"	f
+printCategoryNodeAndAllFeatures	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printCategoryNodeAndAllFeatures(spinNodeHandle hCategoryNode, unsigned int level)$/;"	f
+printCommandNode	NodeMapInfo/NodeMapInfo.cpp	/^int printCommandNode(CNodePtr node, unsigned int level)$/;"	f
+printCommandNode	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printCommandNode(spinNodeHandle hNode, unsigned int level)$/;"	f
+printEnumerationNodeAndCurrentEntry	NodeMapInfo/NodeMapInfo.cpp	/^int printEnumerationNodeAndCurrentEntry(CNodePtr node, unsigned int level)$/;"	f
+printEnumerationNodeAndCurrentEntry	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printEnumerationNodeAndCurrentEntry(spinNodeHandle hEnumerationNode, unsigned int level)$/;"	f
+printFloatNode	NodeMapInfo/NodeMapInfo.cpp	/^int printFloatNode(CNodePtr node, unsigned int level)$/;"	f
+printFloatNode	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printFloatNode(spinNodeHandle hNode, unsigned int level)$/;"	f
+printIntegerNode	NodeMapInfo/NodeMapInfo.cpp	/^int printIntegerNode(CNodePtr node, unsigned int level)$/;"	f
+printIntegerNode	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printIntegerNode(spinNodeHandle hNode, unsigned int level)$/;"	f
+printStringNode	NodeMapInfo/NodeMapInfo.cpp	/^int printStringNode(CNodePtr node, unsigned int level)$/;"	f
+printStringNode	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printStringNode(spinNodeHandle hNode, unsigned int level)$/;"	f
+printValueNode	NodeMapInfo/NodeMapInfo.cpp	/^int printValueNode(CNodePtr node, unsigned int level)$/;"	f
+printValueNode	NodeMapInfo_C/NodeMapInfo_C.cpp	/^spinError printValueNode(spinNodeHandle hNode, unsigned int level)$/;"	f
+readType	NodeMapInfo/NodeMapInfo.cpp	/^enum readType$/;"	g	file:
+readType	NodeMapInfo_C/NodeMapInfo_C.cpp	/^} readType;$/;"	t	typeref:enum:_readType	file:
+triggerType	Abhi_test3/Abhi_test3.cpp	/^enum triggerType$/;"	g	file:
+triggerType	Trigger/Trigger.cpp	/^enum triggerType$/;"	g	file:
+triggerType	Trigger_C/Trigger_C.cpp	/^}triggerType;$/;"	t	typeref:enum:_triggerType	file:
+triggerType	Trigger_C_QuickSpin/Trigger_C_QuickSpin.cpp	/^}triggerType;$/;"	t	typeref:enum:_triggerType	file:
+triggerType	Trigger_QuickSpin/Trigger_QuickSpin.cpp	/^enum triggerType$/;"	g	file:
+userData	DeviceEvents_C/DeviceEvents_C.cpp	/^} userData;$/;"	t	typeref:struct:_userData	file:
+userData	EnumerationEvents_C/EnumerationEvents_C.cpp	/^} userData;$/;"	t	typeref:struct:_userData	file:
+userData	ImageEvents_C/ImageEvents_C.cpp	/^} userData;$/;"	t	typeref:struct:_userData	file:
+~DeviceEventHandler	DeviceEvents/DeviceEvents.cpp	/^	~DeviceEventHandler() {};$/;"	f	class:DeviceEventHandler
+~ImageEventHandler	ImageEvents/ImageEvents.cpp	/^	~ImageEventHandler() {}$/;"	f	class:ImageEventHandler
+~InterfaceEventHandler	EnumerationEvents/EnumerationEvents.cpp	/^	~InterfaceEventHandler() { m_interface = NULL; };$/;"	f	class:InterfaceEventHandler
+~SystemEventHandler	EnumerationEvents/EnumerationEvents.cpp	/^	~SystemEventHandler() {};$/;"	f	class:SystemEventHandler
