@@ -6,6 +6,7 @@
 #include <thread>
 #include <mutex>
 #include <future>
+#include <string>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -41,6 +42,9 @@ enum triggerType
 
 // Select Trigger type
 const triggerType chosenTrigger = SOFTWARE;
+
+string camSerial[] = {"16276645", "16290054", "16290150", "17012295", "17012305", "16290122", "17012302", "17012281"};
+int numImages = 700;
 
 
 int getMilliCount(){
@@ -341,15 +345,16 @@ int GrabNextImageByTrigger(CameraList camList)
     try
     {
     	// Send software trigger command to each camera
+    	//#pragma omp parallel for
 	    for(int i=0; i<camList.GetSize(); i++)
 	   	{
-	   		INodeMap & nodeMap = camList.GetByIndex(i)->GetNodeMap();
+	   		INodeMap & nodeMap = camList.GetBySerial(camSerial[i])->GetNodeMap();
 	   		// Execute software trigger
 	        CCommandPtr ptrSoftwareTriggerCommand = nodeMap.GetNode("TriggerSoftware");
 	        if (!IsAvailable(ptrSoftwareTriggerCommand) || !IsWritable(ptrSoftwareTriggerCommand))
 	        {
 	            cout << "Unable to execute trigger. Aborting..." << endl;
-	            return -1;
+	            //return -1;
 	        }
 
 	        ///////////////////////////
@@ -374,23 +379,24 @@ int GrabNextImageByTrigger(CameraList camList)
 ////////////////
 // AcquireImages
 ////////////////
-void AcquireImages(CameraList camList)
+void AcquireImages(CameraList camList, vector<vector<Mat>> &imageBuffer)
 {
     int result = 0;
     int counter = 0;
 	vector<int> v_time;
     int imgCount = 0;
-	int numImages = 100;
 	int numCams = camList.GetSize();
 	CameraPtr camPtr[numCams];
 	ImagePtr pResultImage[numCams];
 	int start = getMilliCount();
 
+
 	// Extract cameras from camList
 	for(int camNum=0; camNum<numCams; camNum++)
 	{
-		camPtr[camNum] = camList.GetByIndex(camNum);
+		camPtr[camNum] = camList.GetBySerial(camSerial[camNum]);
 	}
+
 	
 	// Acquire Images from all the cameras at the same time
     try
@@ -405,10 +411,12 @@ void AcquireImages(CameraList camList)
 
 		for(int imgNum=0; imgNum<numImages; imgNum++)
         {
-            // Retrieve the next image from the trigger
+            // Send software trigger to all the cameras
             result = result | GrabNextImageByTrigger(camList);
 
-			// Acquire Images from each camera
+			// Acquire images from all the cameras
+			
+			//#pragma omp parallel for
 			for(int camNum=0; camNum<numCams; camNum++)
 			{
 				pResultImage[camNum] = camPtr[camNum]->GetNextImage();
@@ -419,9 +427,48 @@ void AcquireImages(CameraList camList)
 		        	cout << "Image incomplete with image status " << pResultImage[camNum]->GetImageStatus() << "..." << endl << endl;
 					camPtr[camNum]->EndAcquisition();	
 				}
+
+				// Convert the image to Mono8
+				ImagePtr convertedImage = pResultImage[camNum]->Convert(PixelFormat_Mono8, HQ_LINEAR);
+				//ImagePtr convertedImage = pResultImage[camNum];
+
+				// Add image to buffer
+				unsigned int rowBytes = (int)convertedImage->GetImageSize()/convertedImage->GetHeight();
+
+				Mat img = Mat(convertedImage->GetHeight(),
+				                  convertedImage->GetWidth(), CV_8UC1, convertedImage->GetData(), rowBytes);
+
+				imageBuffer[camNum][imgNum] = img.clone();
+
+				pResultImage[camNum]->Release();
 			}
+
+			// Calculate FPS
+			int timeElapsed = getMilliSpan(start);
+			v_time.push_back(timeElapsed);
+
+			if (v_time.size() > 10)
+			{
+				int t = timeElapsed-v_time[v_time.size()-10];
+				double fps = 10000.0/t;
+				cout << fps << endl;
+			}
+		}
+	}// End of try block
+	catch (Spinnaker::Exception &e)
+    {
+        cout << "Error: " << e.what() << endl;
+        result = -1;
+    }
+
+    cout << endl << "########## Saved images to memory ##########" << endl;
 			
-			// Save acquired image from each camera
+} // End of Acquire Images
+
+
+/* For saving images
+
+// Save acquired image from each camera
 			for(int camNum=0; camNum<numCams; camNum++)
 			{
 				// Convert image to Mono8
@@ -455,78 +502,34 @@ void AcquireImages(CameraList camList)
 				cout << fps << endl;
 			}
 				
-		}// End image loop
-
-
-#if 0
-		// End acquisiton for all the cameras
-		for(int i=0; i<numCams; i++)
-		{
-			camPtr[i]->EndAcquisition();
-		}	  
-#endif
-
-
-  	}// End of Try block
-	catch (Spinnaker::Exception &e)
-    {
-        cout << "Error: " << e.what() << endl;
-        result = -1;
-    }
-
-    //return result;
-	cout << endl <<"Finished Saving Images" <<endl;
-}
+		}
+*/
 
 
 
-/*
-void SaveImages(int camNum, vector<Mat> &imageBuffer)
+
+void SaveImages(vector<vector<Mat>> &imageBuffer, int numCams)
 {
-	cout << "Saving from Camera: " << camNum << endl;	
+	cout << endl << "########## Writing images to disk ##########" << endl;	
 	
-	int result = 0;
-	int numImages = 1000;
 	vector<int> v_time;
 	int start = getMilliCount();
-	int imgCount = 1;
-
-	std::this_thread::sleep_for(std::chrono::seconds(2));
+	int imgCount = 0;
 
 	try
 	{
 
-		while(imgCount <= numImages)
+		for(int camNum=0; camNum<numCams; camNum++)
 		{
-			//while(imageBuffer.empty())
-				//std::this_thread::sleep_for(std::chrono::nanoseconds(1));
-				//this_thread::yield();
-			
-			
-			char fileName[1000];
-		
-			// Create unique filename
-			if(camNum == 1)
-				sprintf(fileName, "/home/umh-admin/Downloads/spinnaker_1_0_0_295_amd64/bin/bufferTest/Cam1/%d.jpg", imgCount);
-			else if(camNum == 2)
-				sprintf(fileName, "/home/umh-admin/Downloads/spinnaker_1_0_0_295_amd64/bin/bufferTest/Cam2/%d.jpg", imgCount);
-
-
-			// Pop front image from the buffer
-			if(!imageBuffer.empty())
+			for(int imgNum=0; imgNum<numImages; imgNum++)
 			{
-				// Don't save. Wait till the next image is available
-				m.lock();
-				Mat imgTemp = imageBuffer.front();
-				imageBuffer.erase(imageBuffer.begin());
-				m.unlock();
-				imwrite(fileName, imgTemp);
-#if 0
-				Mat imgTemp = bufferList[camNum][imgCount];
-				cout << "Saving. Cam: " << camNum << " Image: " << imgCount << endl;
-				imwrite(fileName, imgTemp);
-#endif
+				char filename[1000];
+				sprintf(filename, "/home/umh-admin/LabWork/MultiCamSystem/Images/Cam%d-%d.jpg", camNum, imgNum);
 
+				Mat img = imageBuffer[camNum][imgNum];
+				imwrite(filename, img);
+
+/*
 				// Calculate FPS
 				int timeElapsed = getMilliSpan(start);
 				v_time.push_back(timeElapsed);
@@ -537,22 +540,19 @@ void SaveImages(int camNum, vector<Mat> &imageBuffer)
 					double fps = 10000.0/t;
 					cout << fps << endl;
 				}
-
-				++imgCount;
-
+*/
 			}
-			
 		}
-		cout << "Saved Images: " << numImages << endl;
-	}catch (Spinnaker::Exception &e)
+	}
+	catch (Spinnaker::Exception &e)
     {
         cout << "Error: " << e.what() << endl;
-        result = -1;
     }
-	//return result;
-}
-*/
 
+    cout << endl << "########## Writing images complete ##########" << endl;
+}
+
+			
 
 
 ///////////////////
@@ -570,7 +570,7 @@ void emptyImageBuffer(CameraList camList)
 		{
 			cout << "Emptying buffer for camera: " << camNum << endl;
 			// Get Camera Pointer
-			CameraPtr camPtr = camList.GetByIndex(camNum);
+			CameraPtr camPtr = camList.GetBySerial(camSerial[camNum]);
 
 			// Get next image
 			pResultImage = camPtr->GetNextImage();
@@ -612,7 +612,7 @@ int RunMultipleCameras(CameraList camList)
         for (int i = 0; i < camList.GetSize(); i++)
         {
             // Select camera
-            pCam = camList.GetByIndex(i);
+            pCam = camList.GetBySerial(camSerial[i]);
 
 			// Print Camera Serial Number
 			cout << "Initializing Camera: " << i << " SerialNum:" << pCam->GetUniqueID() << endl;
@@ -621,7 +621,7 @@ int RunMultipleCameras(CameraList camList)
             pCam->Init();
 
             // Retrieve GenICam nodemap
-            INodeMap & nodeMap = camList.GetByIndex(i)->GetNodeMap();
+            INodeMap & nodeMap = camList.GetBySerial(camSerial[i])->GetNodeMap();
 
             // Configure Software Trigger
 			result = ConfigureTrigger(nodeMap);
@@ -642,9 +642,17 @@ int RunMultipleCameras(CameraList camList)
 			
         }// End of initialization of trigger and camera
 
+        // Create Buffers for storing images
+        int numCams = camList.GetSize();
+        vector<vector<Mat>> imageBuffer(numCams, vector<Mat>(numImages));
 
-        // Acquire and save images from each camera
-        AcquireImages(camList);
+        
+        
+        // Acquire images from each camera and store to buffer
+        AcquireImages(camList, imageBuffer);
+
+        // Save images from buffer to disk
+        SaveImages(imageBuffer, camList.GetSize());
 		
 
         // Deinitialize each camera
@@ -652,7 +660,7 @@ int RunMultipleCameras(CameraList camList)
 		for (int i = 0; i < camList.GetSize(); i++)
 		{			
 		   	// Select camera
-		    pCam = camList.GetByIndex(i);
+		    pCam = camList.GetBySerial(camSerial[i]);
 
 			pCam->EndAcquisition();
 

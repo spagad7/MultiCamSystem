@@ -7,7 +7,7 @@
 ################################################################################
 CFLAGS += -std=c++11
 CVFLAGS = `pkg-config --cflags opencv`
-CC = g++ ${CFLAGS} -ggdb ${CVFLAGS}
+CC = g++ -fopenmp ${CFLAGS} -ggdb ${CVFLAGS} 
 OUTPUTNAME = MultiCamSTBuffer${D}
 
 OUTDIR = ../../bin
