@@ -44,7 +44,7 @@ enum triggerType
 const triggerType chosenTrigger = SOFTWARE;
 
 string camSerial[] = {"16276645", "16290054", "16290150", "17012295", "17012305", "16290122", "17012302", "17012281"};
-int numImages = 700;
+int numImages = 900;
 
 
 int getMilliCount(){

@@ -37,8 +37,8 @@ int getMilliSpan(int nTimeStart){
         return nSpan;
 }
 
-//const triggerType chosenTrigger = HARDWARE;
-const triggerType chosenTrigger = SOFTWARE;
+const triggerType chosenTrigger = HARDWARE;
+//const triggerType chosenTrigger = SOFTWARE;
 
 
 
@@ -523,10 +523,9 @@ int AcquireImages(CameraList camList)
     {
         char key = 0;
 
-#if 0
         int start = getMilliCount();
         vector<int> v_time;
-#endif
+
         unsigned int imageCnt = 0;
         Mat src[2];
         
@@ -540,8 +539,8 @@ int AcquireImages(CameraList camList)
         while(key!='q' && key!=27)
         {
 			// Get user input
-            cout << o"Press the Enter key to initiate software trigger." << endl;
-            getchar();
+            //cout << "Press the Enter key to initiate software trigger." << endl;
+            //getchar();
 
             // Retrieve the next image from the trigger
             result = result | GrabNextImageByTrigger(primaryNodeMap, primaryCam);
@@ -560,7 +559,7 @@ int AcquireImages(CameraList camList)
                 {
                     ImagePtr pResultImage = pCam->GetNextImage();
 
-                    cout << "Grabbed image from Camera: " << i << endl;
+                    //cout << "Grabbed image from Camera: " << i << endl;
 
                     if (pResultImage->IsIncomplete())
                     {
@@ -572,13 +571,13 @@ int AcquireImages(CameraList camList)
                         // Convert image to BayerRG8
                         ImagePtr convertedImage = pResultImage->Convert(PixelFormat_BayerRG8, HQ_LINEAR);
 
-						char fileName[1000];
+						//char fileName[1000];
 						// Create a unique filename
-						sprintf(fileName, "/home/umh-admin/Downloads/"
-                                "spinnaker_1_0_0_295_amd64/bin/trigger_test/%d/%d.jpg", i+1, imageCnt);
+						//sprintf(fileName, "/home/umh-admin/Downloads/"
+                        //        "spinnaker_1_0_0_295_amd64/bin/trigger_test/%d/%d.jpg", i+1, imageCnt);
 
 						// Save image with unique filename
-						convertedImage->Save(fileName);
+						//convertedImage->Save(fileName);
 
 
 #if 0
@@ -596,15 +595,15 @@ int AcquireImages(CameraList camList)
                         key = cv::waitKey(1);
 #endif
 
-#if 0
-                        long int sysTime = time(0);
 
+                        long int sysTime = time(0);
+/*
                         char temp[1000];
                         sprintf(temp, "/home/umh-admin/Downloads/"
                                 "spinnaker_1_0_0_295_amd64/bin/trigger_test/%d/"
                                 "%d--%Ld--%d.jpg", i+1, i+1, sysTime, imageCnt);
                         imwrite(temp, src);
-
+*/
                         int timeElapsed = getMilliSpan(start);
                         v_time.push_back(timeElapsed);
 
@@ -612,10 +611,10 @@ int AcquireImages(CameraList camList)
                         {
                             int t = timeElapsed-v_time[v_time.size()-10];
                             double fps = 10000.0/t;
-                            //cout << fps << endl;
+                            cout << fps << endl;
                         }
                         ++counter;
-#endif
+
                     }
                     pResultImage->Release();
 					
