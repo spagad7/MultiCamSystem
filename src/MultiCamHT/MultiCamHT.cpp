@@ -564,7 +564,7 @@ int AcquireImages(CameraList camList)
 
                         cv::imwrite(filename, src[i]);
 #endif
-                        //cv::waitKey(1);
+                        cv::waitKey(1);
 
                     }
                     pResultImage->Release();
