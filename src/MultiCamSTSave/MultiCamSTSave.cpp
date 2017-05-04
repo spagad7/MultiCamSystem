@@ -541,7 +541,7 @@ void StreamSyncVideo(CameraList camList)
 		//emptyImageBuffer(camList);
 		// Buffer emptied
 	
-		cout << "Streaming Video" << endl;
+		cout << "Saving Images" << endl;
 
 		//#pragma omp parallel for
 		for(int imgNum=0; imgNum<numImages; imgNum++)
@@ -615,9 +615,16 @@ void StreamSyncVideo(CameraList camList)
 
 		   	}
 
-		   	//resize(imgComposite, imgComposite, size);
+		   	//imshow("All Cam Video", imgComposite);
 
-		   	imshow("All Cam Video", imgComposite);
+		   	// Generate unique filename
+				char filename[1000];
+				sprintf(filename, "/home/umh-admin/LabWork/MultiCamSystem/CompositeImages/Img-%d.jpg", imgNum);
+				
+				// Write image
+				imwrite(filename, imgComposite);
+
+
 
 		   	// Calculate FPS
 			int timeElapsed = getMilliSpan(start);
@@ -635,7 +642,7 @@ void StreamSyncVideo(CameraList camList)
 
 			
  	
-			waitKey(1);
+			//waitKey(1);
 		}// End image loop
 
 
