@@ -550,10 +550,10 @@ int AcquireImages(CameraList camList)
                                 convertedImage->GetWidth(), CV_8UC1, convertedImage->GetData(),
                                 rowBytes);
 
-                        //resize(src[i], src[i], Size(640, 480), 0,0, INTER_LINEAR);
+                        resize(src[i], src[i], Size(640, 480), 0,0, INTER_LINEAR);
 
                         // Display captured image
-                        //cv::imshow("Camera-" + to_string(i), src[i]);
+                        cv::imshow("Camera-" + to_string(i), src[i]);
 
                         // Uncomment to save images
 #if 0
