@@ -38,7 +38,8 @@ ${OUTPUTNAME}: ${OBJ}
 
 # Intermediate objects
 %.o: %.cpp
-	${CC} ${CFLAGS} ${INC} -Wall -c -D LINUX $*.cpp
+	${CC} ${CFLAGS} ${INC} -c -D LINUX $*.cpp
+	#${CC} ${CFLAGS} ${INC} -Wall -c -D LINUX $*.cpp
 
 # Clean up intermediate objects
 clean_obj:

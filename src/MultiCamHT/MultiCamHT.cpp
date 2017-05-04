@@ -66,9 +66,10 @@ int ConfigureTrigger(INodeMap & nodeMap, bool isPrimary)
     
     try
     {
-		//////////////////
-		// Disable Trigger
-        //////////////////
+		///////////////////////////////////////////////////////
+		// Disable Trigger on both primary and secondary camera
+		// Leave trigger disabled on primary camera
+        ///////////////////////////////////////////////////////
         CEnumerationPtr ptrTriggerMode = nodeMap.GetNode("TriggerMode");
         if (!IsAvailable(ptrTriggerMode) || !IsReadable(ptrTriggerMode))
         {
@@ -87,48 +88,33 @@ int ConfigureTrigger(INodeMap & nodeMap, bool isPrimary)
         cout << "Trigger disabled. Configuring Trigger..." << endl;
 		// Trigger disabled
 
-
 		
-        // Select trigger source
-        CEnumerationPtr ptrTriggerSource = nodeMap.GetNode("TriggerSource");
-        if (!IsAvailable(ptrTriggerSource) || !IsWritable(ptrTriggerSource))
-        {
-            cout << "Unable to set trigger mode (node retrieval). Aborting..." << endl;
-            return -1;
-        }
-		
-		/////////////////////////////////////////
-		// Set software trigger on primary camera
-		/////////////////////////////////////////	
+		//////////////////////////////////////
+		// Set line selector on primary camera
+		//////////////////////////////////////	
         if (isPrimary == true)
         {
-            // Set trigger mode to software
-            CEnumEntryPtr ptrTriggerSourceSoftware = ptrTriggerSource->GetEntryByName("Software");
-            if (!IsAvailable(ptrTriggerSourceSoftware) || !IsReadable(ptrTriggerSourceSoftware))
+			// Get pointer to "Line Selector"
+	        CEnumerationPtr ptrLineSelector = nodeMap.GetNode("LineSelector");
+	        if (!IsAvailable(ptrLineSelector) || !IsWritable(ptrLineSelector))
+	        {
+	            cout << "Unable to acquire pointer to Line Selector for Primary Camera. Aborting..." << endl;
+	            return -1;
+	        }
+
+	        // Set Line Selector to Line 0
+            CEnumEntryPtr ptrLineSelectorLine0 = ptrLineSelector->GetEntryByName("Line0");
+            if (!IsAvailable(ptrLineSelectorLine0) || !IsReadable(ptrLineSelectorLine0))
             {
-                cout << "Unable to set trigger mode to Software. Aborting..." << endl;
+                cout << "Unable to set Line Selector to Line 0. Aborting..." << endl;
                 return -1;
             }
 
-            ptrTriggerSource->SetIntValue(ptrTriggerSourceSoftware->GetValue());
-            cout << "Primary camera trigger source set to software." << endl;
-			//TriggerSource set to Software
-    	}     
- 
-            
-		//Enabling Hardware Trigger on Primary Camera and 3.3V
-#if 0
-            // Set trigger mode to hardware for all primary cameras ('Line2')
-            CEnumEntryPtr ptrTriggerSourceHardware = ptrTriggerSource->GetEntryByName("Line2");
-            if (!IsAvailable(ptrTriggerSourceHardware) || !IsReadable(ptrTriggerSourceHardware))
-            {
-                cout << "Unable to set trigger mode (enum entry retrieval). Aborting..." << endl;
-                return -1;
-            }
+            ptrLineSelector->SetIntValue(ptrLineSelectorLine0->GetValue());
+            cout << "Line Selector on Primary Camera set to Line 0" << endl;
+    
 
-            ptrTriggerSource->SetIntValue(ptrTriggerSourceHardware->GetValue());
-            cout << "Trigger source for primary camera set to hardware Line2" << endl;
-
+#if 0      
             //Enable the 3.3V option i.e. make it true
             CBooleanPtr ptrV3_3 = nodeMap.GetNode("V3_3Enable");
             if (!IsAvailable(ptrV3_3) || !IsWritable(ptrV3_3))
@@ -150,15 +136,25 @@ int ConfigureTrigger(INodeMap & nodeMap, bool isPrimary)
 #endif
 
 
- 		
-		/////////////////////////////////////////////////
-		// Configure hardware trigger on secondary camera
-		/////////////////////////////////////////////////
+ 		}// End of configuring trigger for Primary Camera
+
+
+		////////////////////////////////////////////////////////
+		// Configure hardware trigger source on secondary camera
+		////////////////////////////////////////////////////////
 		else 
 		{
-			///////////////////////
-            //TriggerSource = Line3
-			///////////////////////
+			// Select trigger source
+	        CEnumerationPtr ptrTriggerSource = nodeMap.GetNode("TriggerSource");
+	        if (!IsAvailable(ptrTriggerSource) || !IsWritable(ptrTriggerSource))
+	        {
+	            cout << "Unable to set trigger mode (node retrieval). Aborting..." << endl;
+	            return -1;
+	        }
+
+			////////////////////////////////////////
+            //Secondary camera TriggerSource = Line3
+			////////////////////////////////////////
             CEnumEntryPtr ptrTriggerSourceHardware = ptrTriggerSource->GetEntryByName("Line3");
             if (!IsAvailable(ptrTriggerSourceHardware) || !IsReadable(ptrTriggerSourceHardware))
             {
@@ -191,42 +187,43 @@ int ConfigureTrigger(INodeMap & nodeMap, bool isPrimary)
             ptrTriggerOverlap->SetIntValue(ptrTriggerOverlapValue->GetValue());
             cout << "Secondary Camera: TriggerOverlap = ReadOut" << endl << endl;
 			//TriggerOverlap set to ReadOut
-        }
 
-        ///////////////////////////////////////////////////////////////////////
-        // Setting trigger selector to FrameBurst/Acquisition/FrameStart Mode
-        //////////////////////////////////////////////////////////////////////
-        CEnumerationPtr ptrTriggerSelector = nodeMap.GetNode("TriggerSelector");
-        if (!IsAvailable(ptrTriggerSelector) || !IsReadable(ptrTriggerSelector)) {
-            cout << "Unable to get the trigger selectr value. Abort....." << endl << endl;
-            return -1;
-        }
+			///////////////////////////////////////////////////////////////////////
+	        // Setting trigger selector to FrameBurst/Acquisition/FrameStart Mode
+	        //////////////////////////////////////////////////////////////////////
+	        CEnumerationPtr ptrTriggerSelector = nodeMap.GetNode("TriggerSelector");
+	        if (!IsAvailable(ptrTriggerSelector) || !IsReadable(ptrTriggerSelector)) {
+	            cout << "Unable to get the trigger selectr value. Abort....." << endl << endl;
+	            return -1;
+	        }
 
-        CEnumEntryPtr ptrTriggerSelectorSel = ptrTriggerSelector->GetEntryByName("FrameStart");
-        if (!IsAvailable(ptrTriggerSelectorSel) || !IsReadable(ptrTriggerSelectorSel))
-        {
-            cout << "Unable to selct trigger selector "
-                "(enum entry retrieval). Aborting..." << endl;
-            return -1;
-        }
-        ptrTriggerSelector->SetIntValue(ptrTriggerSelectorSel->GetValue());
-        cout << " Trigger selector: " << ptrTriggerSelector->GetIntValue() << endl;
+	        CEnumEntryPtr ptrTriggerSelectorSel = ptrTriggerSelector->GetEntryByName("FrameStart");
+	        if (!IsAvailable(ptrTriggerSelectorSel) || !IsReadable(ptrTriggerSelectorSel))
+	        {
+	            cout << "Unable to selct trigger selector "
+	                "(enum entry retrieval). Aborting..." << endl;
+	            return -1;
+	        }
+	        ptrTriggerSelector->SetIntValue(ptrTriggerSelectorSel->GetValue());
+	        cout << "Trigger selector: " << ptrTriggerSelector->GetIntValue() << endl;
 
 
-        /////////////////
-        // Enable Trigger
-        /////////////////
-        CEnumEntryPtr ptrTriggerModeOn = ptrTriggerMode->GetEntryByName("On");
-        if (!IsAvailable(ptrTriggerModeOn) || !IsReadable(ptrTriggerModeOn))
-        {
-            cout << "Unable to enable trigger mode (enum entry retrieval). Aborting..." << endl;
-            return -1;
-        }
+	        //////////////////////////////////////////
+	        // Enable Trigger only on secondary camera
+	        //////////////////////////////////////////
+	        CEnumEntryPtr ptrTriggerModeOn = ptrTriggerMode->GetEntryByName("On");
+	        if (!IsAvailable(ptrTriggerModeOn) || !IsReadable(ptrTriggerModeOn))
+	        {
+	            cout << "Unable to enable trigger mode (enum entry retrieval). Aborting..." << endl;
+	            return -1;
+	        }
 
-        ptrTriggerMode->SetIntValue(ptrTriggerModeOn->GetValue());
-        cout << "Trigger turned on" << endl << endl;
-		// Trigger enabled
-		
+	        ptrTriggerMode->SetIntValue(ptrTriggerModeOn->GetValue());
+	        cout << "Trigger turned on" << endl << endl;
+			// Trigger enabled
+
+        }// End of configuring trigger for secondary camera
+
     }
     catch (Spinnaker::Exception &e)
     {
@@ -236,130 +233,145 @@ int ConfigureTrigger(INodeMap & nodeMap, bool isPrimary)
 
     return result;
 } 
-// End of Configure Trigger
+// End of ConfigureTrigger
 
 
 
 
+///////////////////////////////
 // Function to configure Camera
-int ConfigureCamera(CameraPtr pCam, INodeMap & nodeMap) {
+///////////////////////////////
+int ConfigureCamera(CameraPtr pCam, INodeMap & nodeMap) 
+{
 
-    //
-    // Prepare each camera to acquire images
-    //
-    // *** NOTES ***
-    // For pseudo-simultaneous streaming, each camera is prepared as if it
-    // were just one, but in a loop. Notice that cameras are selected with
-    // an index. We demonstrate pseduo-simultaneous streaming because true
-    // simultaneous streaming would require multiple process or threads,
-    // which is too complex for an example.
-    //
-    // Serial numbers are the only persistent objects we gather in this
-    // example, which is why a vector is created.
-    //
-
-    float resultingFrameRate = 0, AcFrameRate = 0;
+    float acquisitionFrameRate = 0, AcFrameRate = 0;
     int result = 0;
 
-    try	{
-			/////////////////////////////////////
-		    // Set acquisition mode to continuous
-			/////////////////////////////////////
-		    CEnumerationPtr ptrAcquisitionMode = pCam->GetNodeMap().GetNode("AcquisitionMode");
-		    if (!IsAvailable(ptrAcquisitionMode) || !IsWritable(ptrAcquisitionMode))
-		    {
-		        cout << "Unable to set acquisition mode to continuous" << endl;
-		        return -1;
-		    }
+    try {
+            /////////////////////////////////////
+            // Set acquisition mode to continuous
+            /////////////////////////////////////
+            CEnumerationPtr ptrAcquisitionMode = pCam->GetNodeMap().GetNode("AcquisitionMode");
+            if (!IsAvailable(ptrAcquisitionMode) || !IsWritable(ptrAcquisitionMode))
+            {
+                cout << "Unable to set acquisition mode to continuous" << endl;
+                return -1;
+            }
 
-		    CEnumEntryPtr ptrAcquisitionModeContinuous = ptrAcquisitionMode->GetEntryByName("Continuous");
-		    if (!IsAvailable(ptrAcquisitionModeContinuous) || !IsReadable(ptrAcquisitionModeContinuous))
-		    {
-		        cout << "Unable to set acquisition mode to continuous" << endl;
-		        return -1;
-		    }
+            CEnumEntryPtr ptrAcquisitionModeContinuous = ptrAcquisitionMode->GetEntryByName("Continuous");
+            if (!IsAvailable(ptrAcquisitionModeContinuous) || !IsReadable(ptrAcquisitionModeContinuous))
+            {
+                cout << "Unable to set acquisition mode to continuous" << endl;
+                return -1;
+            }
 
-		    ptrAcquisitionMode->SetIntValue(ptrAcquisitionModeContinuous->GetValue());
-		    cout << "Acquisition mode set to continuous..." << endl;
-			// Set acquisition mode to continuous
+            ptrAcquisitionMode->SetIntValue(ptrAcquisitionModeContinuous->GetValue());
+            cout << "Acquisition mode set to continuous..." << endl;
+            // Acquisition mode set to continuous
+
+
+            ///////////////////////////////////
+            // Turn off automatic exposure mode
+            ///////////////////////////////////
+            CEnumerationPtr ptrExposureAuto = nodeMap.GetNode("ExposureAuto");
+            if (!IsAvailable(ptrExposureAuto) || !IsWritable(ptrExposureAuto))
+            {
+                cout << "Unable to disable automatic exposure (node retrieval). Aborting..." << endl << endl;
+                return -1;
+            }
+        
+            CEnumEntryPtr ptrExposureAutoOff = ptrExposureAuto->GetEntryByName("Off");
+            if (!IsAvailable(ptrExposureAutoOff) || !IsReadable(ptrExposureAutoOff))
+            {
+                cout << "Unable to disable automatic exposure (enum entry retrieval). Aborting..." << endl << endl;
+                return -1;
+            }
+        
+            ptrExposureAuto->SetIntValue(ptrExposureAutoOff->GetValue());
+            // Auto Exposure turned off
+            
+
+            /////////////////////////////////////////////////////////////////////
+            // Set exposure time manually; exposure time recorded in microseconds
+            /////////////////////////////////////////////////////////////////////
+            CFloatPtr ptrExposureTime = nodeMap.GetNode("ExposureTime");
+            if (!IsAvailable(ptrExposureTime) || !IsWritable(ptrExposureTime))
+            {
+                cout << "Unable to set exposure time. Aborting..." << endl << endl;
+                return -1;
+            }
+        
+            // Ensure desired exposure time does not exceed the maximum
+            const double exposureTimeMax = ptrExposureTime->GetMax();
+            double exposureTimeToSet = 5500.0;
+
+            if (exposureTimeToSet > exposureTimeMax)
+            {
+                exposureTimeToSet = exposureTimeMax;
+            }
+        
+            ptrExposureTime->SetValue(exposureTimeToSet);
+        
+            cout << "Exposure time set to " << exposureTimeToSet << " us..." << endl << endl;
+            // Exposure set to 5500.0
 
 #if 0
-		    //Exposure Time = 2000 us
-		    CFloatPtr ptrExposureTime = nodeMap.GetNode("ExposureTime");
-		    if (!IsAvailable(ptrExposureTime) || !IsWritable(ptrExposureTime))
-		    {
-		        cout << "Unable to set exposure time. Aborting..." << endl << endl;
-		        return -1;
-		    }
+            // Setting up Acquisition frame rate --------------------------------------------//
+            CFloatPtr ptrAcquisitionFrameRate = nodeMap.GetNode("AcquisitionFrameRate");
+            if (!IsAvailable(ptrAcquisitionFrameRate) || !IsReadable(ptrAcquisitionFrameRate)) {
+                cout << "Unable to retrieve frame rate. Aborting..." << endl << endl;
+                return -1;
+            }
 
+            const float AcFrameRateMax = ptrAcquisitionFrameRate->GetMax();
+            float AcFrameRatetoSet = 170;
 
-		    // Ensure desired exposure time does not exceed the maximum
-		    const double exposureTimeMax = ptrExposureTime->GetMax();
-		    double exposureTimeToSet = 2000.0;
+            if(AcFrameRatetoSet > AcFrameRateMax) {
+                AcFrameRatetoSet = AcFrameRateMax;
+            }
 
-		    if (exposureTimeToSet > exposureTimeMax)
-		    {
-		        exposureTimeToSet = exposureTimeMax;
-		    }
+            ptrAcquisitionFrameRate->SetValue(AcFrameRatetoSet);
 
-		    ptrExposureTime->SetValue(exposureTimeToSet);
-		    cout << "Exposure time set to " << exposureTimeToSet << " us..." << endl;
+            cout << "Acquisition Frame Rate: " << AcFrameRatetoSet << " fps" << endl;
 #endif
 
 #if 0
-		    // Setting up Acquisition frame rate --------------------------------------------//
-		    CFloatPtr ptrAcquisitionFrameRate = nodeMap.GetNode("AcquisitionFrameRate");
-		    if (!IsAvailable(ptrAcquisitionFrameRate) || !IsReadable(ptrAcquisitionFrameRate)) {
-		        cout << "Unable to retrieve frame rate. Aborting..." << endl << endl;
-		        return -1;
-		    }
+            // Enableing the acquisition frame rate enable option
+            CBooleanPtr ptrAcquisitionFrameRateEnable = nodeMap.GetNode("Acquisition0FrameRateEnable");
+            if (!IsAvailable(ptrAcquisitionFrameRateEnable)
+                    || !IsReadable(ptrAcquisitionFrameRateEnable))
+            {
+                cout << "Unable to enable the ac frame rate. Aborting..." << endl << endl;
+                return -1;
+            }
 
-		    const float AcFrameRateMax = ptrAcquisitionFrameRate->GetMax();
-		    float AcFrameRatetoSet = 170;
-
-		    if(AcFrameRatetoSet > AcFrameRateMax) {
-		        AcFrameRatetoSet = AcFrameRateMax;
-		    }
-
-		    ptrAcquisitionFrameRate->SetValue(AcFrameRatetoSet);
-
-		    cout << "Acquisition Frame Rate: " << AcFrameRatetoSet << " fps" << endl;
+            ptrAcquisitionFrameRateEnable->SetValue("On");
 #endif
+            ///////////////////////////////////
+            // Display acquisition frame rate
+            //////////////////////////////////
+            CFloatPtr ptrAcquisitionFrameRate = nodeMap.GetNode("AcquisitionFrameRate");
+            if (!IsAvailable(ptrAcquisitionFrameRate)
+                    || !IsReadable(ptrAcquisitionFrameRate))
+            {
+                cout << "Unable to retrieve frame rate. Aborting..." << endl << endl;
+                return -1;
+            }
 
-#if 0
-		    // Enableing the acquisition frame rate enable option
-		    CBooleanPtr ptrAcquisitionFrameRateEnable = nodeMap.GetNode("Acquisition0FrameRateEnable");
-		    if (!IsAvailable(ptrAcquisitionFrameRateEnable)
-		            || !IsReadable(ptrAcquisitionFrameRateEnable))
-		    {
-		        cout << "Unable to enable the ac frame rate. Aborting..." << endl << endl;
-		        return -1;
-		    }
+            acquisitionFrameRate = static_cast<float>(ptrAcquisitionFrameRate->GetValue());
+            cout << "Acquisition Frame Rate: " << acquisitionFrameRate << endl << endl;
 
-		    ptrAcquisitionFrameRateEnable->SetValue("On");
-#endif
+            /////////////////////////
+            // Begin acquiring images
+            /////////////////////////
+            pCam->BeginAcquisition();
 
-		    // Retrieve Resulting Acquisition frame rate ------------------------------------//
-		    CFloatPtr ptrAcquisitionResultingFrameRate = nodeMap.GetNode("AcquisitionResultingFrameRate");
-		    if (!IsAvailable(ptrAcquisitionResultingFrameRate)
-		            || !IsReadable(ptrAcquisitionResultingFrameRate))
-		    {
-		        cout << "Unable to retrieve frame rate. Aborting..." << endl << endl;
-		        return -1;
-		    }
-
-		    resultingFrameRate = static_cast<float>(ptrAcquisitionResultingFrameRate->GetValue());
-		    cout << "Resulting Frame Rate: " << resultingFrameRate << endl << endl;
-
-		    // Begin acquiring images
-		    pCam->BeginAcquisition();
-
-    	} 
-		catch (Spinnaker::Exception &e) 
-		{
+        } 
+        catch (Spinnaker::Exception &e) 
+        {
         cout << "Error: " << e.what() << endl;
         result = -1;
-    	}
+        }
     return result;
 }
 
@@ -427,6 +439,10 @@ int ResetTrigger(INodeMap & nodeMap)
 // the example to hang. This is different from other examples, whereby a
 // constant stream of images are being captured and made available for image
 // acquisition.
+
+// Note: If the cameras are configured for hardware trigger, your program need not
+// send trigger signals to either primary or secondary camera. The primary camera will
+// automatically send trigger signals over GPIO cable and keep all the cameras synchronized
 int GrabNextImageByTrigger(INodeMap & nodeMap, CameraPtr pCam)
 {
     int result = 0;
@@ -459,75 +475,63 @@ int GrabNextImageByTrigger(INodeMap & nodeMap, CameraPtr pCam)
 }
 
 
-
-
-
-// This function  acquires images from all the initialized cameras
+/////////////////////////////////////////////////////
+// Retrieve, convert, and save images for each camera
+/////////////////////////////////////////////////////
 int AcquireImages(CameraList camList)
 {
     int result = 0;
     CameraPtr pCam = NULL, primaryCam = NULL;
-    int counter = 0;
+    int imgTotal = 5000;
 
     try
     {
-        /////////////////////////////////////////////////////
-        // Retrieve, convert, and save images for each camera
-        /////////////////////////////////////////////////////
+    
+        // Uncomment this part to display FPS
 #if 0
-        vector<gcstring> strSerialNumbers(camList.GetSize());
-
-        for(int i = 0; i<camList.GetSize(); ++i) {
-
-            pCam = camList.GetByIndex(i);
-
-            // Retrieve device serial number for filename
-            strSerialNumbers[i] = "";
-            CStringPtr ptrStringSerial = pCam->GetTLDeviceNodeMap().GetNode("DeviceSerialNumber");
-            if (IsAvailable(ptrStringSerial) && IsReadable(ptrStringSerial))
-            {
-                strSerialNumbers[i] = ptrStringSerial->GetValue();
-                cout << "Camera " << i << " serial number set to " 
-                    << strSerialNumbers[i] << "..." << endl << endl;
-            }
-        }
+        int start = getMilliCount();
+        vector<int> v_time;
 #endif
-        char key = 0;
-
 
         int start = getMilliCount();
         vector<int> v_time;
 
-        unsigned int imageCnt = 0;
-        Mat src[2];
+        unsigned int imgNum = 0;
+        Mat src[camList.GetSize()];
         
         primaryCam = camList.GetByIndex(0);
         INodeMap & primaryNodeMap = primaryCam->GetNodeMap();
+
+        cout << "Streaming Video" << endl;
        
-        while(key!='q' && key!=27)
+        while(imgNum < imgTotal)
         {
+
+
+			// Uncomment this part if you want to use software trigger
+#if 0
 			// Get user input
-            //cout << "Press the Enter key to initiate software trigger." << endl;
-            //getchar();
+            cout << "Press the Enter key to initiate software trigger." << endl;
+            getchar();
 
             // Retrieve the next image from the trigger
             result = result | GrabNextImageByTrigger(primaryNodeMap, primaryCam);
 
             if(result == -1) {
-                cout << __LINE__ << imageCnt << endl;
+                cout << __LINE__ << imgNum << endl;
                 continue;
             }
-        
-            
+#endif
+
+
             for(int i = 0; i < camList.GetSize(); ++i)
             {	
                 // Select camera
                 pCam = camList.GetByIndex(i);
                 try
                 {
+                	// Acquire Image from camera
                     ImagePtr pResultImage = pCam->GetNextImage();
-
-                    //cout << "Grabbed image from Camera: " << i << endl;
 
                     if (pResultImage->IsIncomplete())
                     {
@@ -539,16 +543,6 @@ int AcquireImages(CameraList camList)
                         // Convert image to BayerRG8
                         ImagePtr convertedImage = pResultImage->Convert(PixelFormat_Mono8, HQ_LINEAR);
 
-						//char fileName[1000];
-						// Create a unique filename
-						//sprintf(fileName, "/home/umh-admin/Downloads/"
-                        //        "spinnaker_1_0_0_295_amd64/bin/trigger_test/%d/%d.jpg", i+1, imageCnt);
-
-						// Save image with unique filename
-						//convertedImage->Save(fileName);
-
-
-#if 0
                         unsigned int rowBytes
                             = (int)convertedImage->GetImageSize()/convertedImage->GetHeight();
 
@@ -556,32 +550,21 @@ int AcquireImages(CameraList camList)
                                 convertedImage->GetWidth(), CV_8UC1, convertedImage->GetData(),
                                 rowBytes);
 
-                        resize(src[i], src[i], Size(640, 480), 0,0, INTER_LINEAR);
+                        //resize(src[i], src[i], Size(640, 480), 0,0, INTER_LINEAR);
 
-                        cv::imshow("Camera-" + to_string(i), src[i]);
+                        // Display captured image
+                        //cv::imshow("Camera-" + to_string(i), src[i]);
 
-                        key = cv::waitKey(1);
+                        // Uncomment to save images
+#if 0
+                        char fileName[1000];
+						
+						// Create filename
+						sprintf(fileName, "/home/umh-admin/Pictures/MultiCam/Cam%d-img%d.jpg", i, imgNum);
+
+                        cv::imwrite(filename, src[i]);
 #endif
-
-
-                        long int sysTime = time(0);
-/*
-                        char temp[1000];
-                        sprintf(temp, "/home/umh-admin/Downloads/"
-                                "spinnaker_1_0_0_295_amd64/bin/trigger_test/%d/"
-                                "%d--%Ld--%d.jpg", i+1, i+1, sysTime, imageCnt);
-                        imwrite(temp, src);
-*/
-                        int timeElapsed = getMilliSpan(start);
-                        v_time.push_back(timeElapsed);
-
-                        if (v_time.size() > 10)
-                        {
-                            int t = timeElapsed-v_time[v_time.size()-10];
-                            double fps = 10000.0/t;
-                            //cout << fps << endl;
-                        }
-                        ++counter;
+                        //cv::waitKey(1);
 
                     }
                     pResultImage->Release();
@@ -593,16 +576,20 @@ int AcquireImages(CameraList camList)
                     result = -1;
                 }
             }
-            ++imageCnt;
+
+            // Uncomment to display FPS
+            int timeElapsed = getMilliSpan(start);
+            v_time.push_back(timeElapsed);
+
+            if (v_time.size() > 10)
+            {
+                int t = timeElapsed-v_time[v_time.size()-10];
+                double fps = 10000.0/t;
+                cout << fps << endl;
+            }
+
+            ++imgNum;
         }
-#if 0
-        //Display Stats
-        int milliSecondsElapsed = getMilliSpan(start);
-        cout << "Capture Time in milliseconds: " << milliSecondsElapsed << "." << endl;
-        //cout << "Images saved: " << counter << endl;
-        //cout << "Images saved per second: " << (counter*1000)/milliSecondsElapsed << endl;
-        cout << "Calculated FPS: " << (counter*1000)/milliSecondsElapsed << endl;
-#endif
 
         //////////////////////////////////
         // End acquisition for each camera
@@ -661,6 +648,7 @@ int RunMultipleCameras(CameraList camList)
             if(i>0)
                 isPrimary = false;
 
+            // Call function to configure trigger
             result = ConfigureTrigger(nodeMap, isPrimary);
             if (result < 0)
             {
@@ -668,6 +656,7 @@ int RunMultipleCameras(CameraList camList)
                 return result;
             }
 
+            // Call function to configure camera
             result = ConfigureCamera(pCam, nodeMap);
 			if (result < 0)
             {
